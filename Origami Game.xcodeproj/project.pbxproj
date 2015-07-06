@@ -9,13 +9,51 @@
 /* Begin PBXBuildFile section */
 		5239FA281A8D6AA000434C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA271A8D6AA000434C25 /* main.m */; };
 		5239FA2B1A8D6AA000434C25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA2A1A8D6AA000434C25 /* AppDelegate.m */; };
-		5239FA2E1A8D6AA000434C25 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA2D1A8D6AA000434C25 /* GameScene.m */; };
-		5239FA301A8D6AA000434C25 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA2F1A8D6AA000434C25 /* GameScene.sks */; };
-		5239FA331A8D6AA000434C25 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA321A8D6AA000434C25 /* GameViewController.m */; };
+		5239FA2E1A8D6AA000434C25 /* GBAGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA2D1A8D6AA000434C25 /* GBAGameScene.m */; };
+		5239FA331A8D6AA000434C25 /* GBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA321A8D6AA000434C25 /* GBAViewController.m */; };
 		5239FA361A8D6AA000434C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA341A8D6AA000434C25 /* Main.storyboard */; };
 		5239FA381A8D6AA000434C25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA371A8D6AA000434C25 /* Images.xcassets */; };
-		5239FA3B1A8D6AA000434C25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA391A8D6AA000434C25 /* LaunchScreen.xib */; };
 		5239FA471A8D6AA000434C25 /* Origami_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA461A8D6AA000434C25 /* Origami_GameTests.m */; };
+		5239FA511A8D6B3600434C25 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5239FA501A8D6B3600434C25 /* iAd.framework */; };
+		5239FA531A8D6B3B00434C25 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5239FA521A8D6B3B00434C25 /* GameKit.framework */; };
+		5239FA561A8D6B4D00434C25 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA551A8D6B4D00434C25 /* GameState.m */; };
+		5239FA591A8D6B5700434C25 /* GBAMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA581A8D6B5700434C25 /* GBAMenuScene.m */; };
+		5239FA5B1A8D6B6500434C25 /* MenuParticleRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA5A1A8D6B6500434C25 /* MenuParticleRain.sks */; };
+		5239FA611A8D6B7F00434C25 /* deep-blue-sea.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */; };
+		5239FA631A8D6B7F00434C25 /* origami .wav in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA5E1A8D6B7F00434C25 /* origami .wav */; };
+		5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */; };
+		5239FA711A8D6B9C00434C25 /* boulder.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA661A8D6B9C00434C25 /* boulder.ttf */; };
+		5239FA721A8D6B9C00434C25 /* LaunchImage_Origami.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA671A8D6B9C00434C25 /* LaunchImage_Origami.png */; };
+		5239FA731A8D6B9C00434C25 /* gameOverRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA681A8D6B9C00434C25 /* gameOverRectangle.png */; };
+		5239FA741A8D6B9C00434C25 /* shakeMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA691A8D6B9C00434C25 /* shakeMessage.png */; };
+		5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */; };
+		5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */; };
+		5239FA791A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */; };
+		5239FA7A1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */; };
+		5239FA7B1A8D6B9C00434C25 /* play-48 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA701A8D6B9C00434C25 /* play-48 copia.png */; };
+		5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA7C1A8D793700434C25 /* LaunchImage6s.png */; };
+		5239FA7F1A8D805C00434C25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */; };
+		52411EB11B3853DB00175DC1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411EAE1B3853DB00175DC1 /* FBSDKCoreKit.framework */; };
+		52411EB21B3853DB00175DC1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411EAF1B3853DB00175DC1 /* FBSDKLoginKit.framework */; };
+		52411EB31B3853DB00175DC1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411EB01B3853DB00175DC1 /* FBSDKShareKit.framework */; };
+		52444B481AB7688800E6FD31 /* GBAInfoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 52444B471AB7688800E6FD31 /* GBAInfoScene.m */; };
+		52444B4A1AB77DDE00E6FD31 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B491AB77DDE00E6FD31 /* info.png */; };
+		52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B4B1AB7805E00E6FD31 /* help-100.png */; };
+		526B6A681B3EF17100BAA4BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B6A671B3EF17100BAA4BA /* StoreKit.framework */; };
+		527283EB1B49E1080071C977 /* origami-credit.png in Resources */ = {isa = PBXBuildFile; fileRef = 527283E91B49E1080071C977 /* origami-credit.png */; };
+		527283EC1B49E1080071C977 /* Shopping_Cart_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 527283EA1B49E1080071C977 /* Shopping_Cart_128.png */; };
+		5285B9311AA3E38C00286034 /* leaderboard-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 5285B9301AA3E38C00286034 /* leaderboard-104.png */; };
+		5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5285B9321AA3EF4900286034 /* info_filled-100.png */; };
+		52C51B1F1B15169100EA0B4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C51B1E1B15169100EA0B4B /* Foundation.framework */; };
+		52D053391B31D812009BEE2C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D053381B31D812009BEE2C /* SpriteKit.framework */; };
+		52E258371A9BF4790072F711 /* origami-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E258361A9BF4790072F711 /* origami-48.png */; };
+		52E3DE721B349B2C00D3860F /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E3DE711B349B2C00D3860F /* share.png */; };
+		52E3DE741B34A17F00D3860F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E3DE731B34A17F00D3860F /* Social.framework */; };
+		52E3DE771B34E8B700D3860F /* GBASocialScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3DE761B34E8B700D3860F /* GBASocialScene.m */; };
+		52E3DE7C1B34F77700D3860F /* facebook_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E3DE781B34F77700D3860F /* facebook_background.png */; };
+		52E3DE7D1B34F77700D3860F /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E3DE791B34F77700D3860F /* facebook.png */; };
+		52E3DE7E1B34F77700D3860F /* twitter_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E3DE7A1B34F77700D3860F /* twitter_background.png */; };
+		52E3DE7F1B34F77700D3860F /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 52E3DE7B1B34F77700D3860F /* twitter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +72,59 @@
 		5239FA271A8D6AA000434C25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5239FA291A8D6AA000434C25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5239FA2A1A8D6AA000434C25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5239FA2C1A8D6AA000434C25 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		5239FA2D1A8D6AA000434C25 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		5239FA2F1A8D6AA000434C25 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		5239FA311A8D6AA000434C25 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		5239FA321A8D6AA000434C25 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5239FA2C1A8D6AA000434C25 /* GBAGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAGameScene.h; sourceTree = "<group>"; };
+		5239FA2D1A8D6AA000434C25 /* GBAGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBAGameScene.m; sourceTree = "<group>"; };
+		5239FA311A8D6AA000434C25 /* GBAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAViewController.h; sourceTree = "<group>"; };
+		5239FA321A8D6AA000434C25 /* GBAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBAViewController.m; sourceTree = "<group>"; };
 		5239FA351A8D6AA000434C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5239FA371A8D6AA000434C25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5239FA3A1A8D6AA000434C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5239FA401A8D6AA000434C25 /* Origami GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Origami GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239FA451A8D6AA000434C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5239FA461A8D6AA000434C25 /* Origami_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Origami_GameTests.m; sourceTree = "<group>"; };
+		5239FA501A8D6B3600434C25 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		5239FA521A8D6B3B00434C25 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5239FA541A8D6B4D00434C25 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		5239FA551A8D6B4D00434C25 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		5239FA571A8D6B5700434C25 /* GBAMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAMenuScene.h; sourceTree = "<group>"; };
+		5239FA581A8D6B5700434C25 /* GBAMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAMenuScene.m; sourceTree = "<group>"; };
+		5239FA5A1A8D6B6500434C25 /* MenuParticleRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuParticleRain.sks; sourceTree = "<group>"; };
+		5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "deep-blue-sea.wav"; sourceTree = "<group>"; };
+		5239FA5E1A8D6B7F00434C25 /* origami .wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "origami .wav"; sourceTree = "<group>"; };
+		5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hit_Hurt34.wav; sourceTree = "<group>"; };
+		5239FA661A8D6B9C00434C25 /* boulder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = boulder.ttf; sourceTree = "<group>"; };
+		5239FA671A8D6B9C00434C25 /* LaunchImage_Origami.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage_Origami.png; sourceTree = "<group>"; };
+		5239FA681A8D6B9C00434C25 /* gameOverRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOverRectangle.png; sourceTree = "<group>"; };
+		5239FA691A8D6B9C00434C25 /* shakeMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeMessage.png; sourceTree = "<group>"; };
+		5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOverImage.png; sourceTree = "<group>"; };
+		5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_trash-128 20-32-54-064 20-43-37-238 copia.png"; sourceTree = "<group>"; };
+		5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-50 20-43-37-341 copia.png"; sourceTree = "<group>"; };
+		5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrigamiTitleMenuFrame.png; sourceTree = "<group>"; };
+		5239FA701A8D6B9C00434C25 /* play-48 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-48 copia.png"; sourceTree = "<group>"; };
+		5239FA7C1A8D793700434C25 /* LaunchImage6s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage6s.png; sourceTree = "<group>"; };
+		5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		52411EAE1B3853DB00175DC1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		52411EAF1B3853DB00175DC1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		52411EB01B3853DB00175DC1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		52444B461AB7688800E6FD31 /* GBAInfoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAInfoScene.h; sourceTree = "<group>"; };
+		52444B471AB7688800E6FD31 /* GBAInfoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAInfoScene.m; sourceTree = "<group>"; };
+		52444B491AB77DDE00E6FD31 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		52444B4B1AB7805E00E6FD31 /* help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-100.png"; sourceTree = "<group>"; };
+		526B6A671B3EF17100BAA4BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		527283E91B49E1080071C977 /* origami-credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-credit.png"; sourceTree = "<group>"; };
+		527283EA1B49E1080071C977 /* Shopping_Cart_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shopping_Cart_128.png; sourceTree = "<group>"; };
+		5285B9301AA3E38C00286034 /* leaderboard-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard-104.png"; sourceTree = "<group>"; };
+		5285B9321AA3EF4900286034 /* info_filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_filled-100.png"; sourceTree = "<group>"; };
+		52C51B1E1B15169100EA0B4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52D053381B31D812009BEE2C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		52E258361A9BF4790072F711 /* origami-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-48.png"; sourceTree = "<group>"; };
+		52E3DE711B349B2C00D3860F /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		52E3DE731B34A17F00D3860F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		52E3DE751B34E8B700D3860F /* GBASocialScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASocialScene.h; sourceTree = "<group>"; };
+		52E3DE761B34E8B700D3860F /* GBASocialScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBASocialScene.m; sourceTree = "<group>"; };
+		52E3DE781B34F77700D3860F /* facebook_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_background.png; sourceTree = "<group>"; };
+		52E3DE791B34F77700D3860F /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		52E3DE7A1B34F77700D3860F /* twitter_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_background.png; sourceTree = "<group>"; };
+		52E3DE7B1B34F77700D3860F /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +132,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526B6A681B3EF17100BAA4BA /* StoreKit.framework in Frameworks */,
+				52411EB31B3853DB00175DC1 /* FBSDKShareKit.framework in Frameworks */,
+				52E3DE741B34A17F00D3860F /* Social.framework in Frameworks */,
+				52411EB11B3853DB00175DC1 /* FBSDKCoreKit.framework in Frameworks */,
+				52D053391B31D812009BEE2C /* SpriteKit.framework in Frameworks */,
+				52C51B1F1B15169100EA0B4B /* Foundation.framework in Frameworks */,
+				52411EB21B3853DB00175DC1 /* FBSDKLoginKit.framework in Frameworks */,
+				5239FA511A8D6B3600434C25 /* iAd.framework in Frameworks */,
+				5239FA531A8D6B3B00434C25 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +157,15 @@
 		5239FA191A8D6AA000434C25 = {
 			isa = PBXGroup;
 			children = (
+				526B6A671B3EF17100BAA4BA /* StoreKit.framework */,
+				52411EAE1B3853DB00175DC1 /* FBSDKCoreKit.framework */,
+				52411EAF1B3853DB00175DC1 /* FBSDKLoginKit.framework */,
+				52411EB01B3853DB00175DC1 /* FBSDKShareKit.framework */,
+				52E3DE731B34A17F00D3860F /* Social.framework */,
+				52D053381B31D812009BEE2C /* SpriteKit.framework */,
+				52C51B1E1B15169100EA0B4B /* Foundation.framework */,
+				5239FA521A8D6B3B00434C25 /* GameKit.framework */,
+				5239FA501A8D6B3600434C25 /* iAd.framework */,
 				5239FA241A8D6AA000434C25 /* Origami Game */,
 				5239FA431A8D6AA000434C25 /* Origami GameTests */,
 				5239FA231A8D6AA000434C25 /* Products */,
@@ -88,14 +186,22 @@
 			children = (
 				5239FA291A8D6AA000434C25 /* AppDelegate.h */,
 				5239FA2A1A8D6AA000434C25 /* AppDelegate.m */,
-				5239FA2C1A8D6AA000434C25 /* GameScene.h */,
-				5239FA2D1A8D6AA000434C25 /* GameScene.m */,
-				5239FA2F1A8D6AA000434C25 /* GameScene.sks */,
-				5239FA311A8D6AA000434C25 /* GameViewController.h */,
-				5239FA321A8D6AA000434C25 /* GameViewController.m */,
+				5239FA541A8D6B4D00434C25 /* GameState.h */,
+				5239FA551A8D6B4D00434C25 /* GameState.m */,
+				5239FA311A8D6AA000434C25 /* GBAViewController.h */,
+				5239FA321A8D6AA000434C25 /* GBAViewController.m */,
+				5239FA571A8D6B5700434C25 /* GBAMenuScene.h */,
+				5239FA581A8D6B5700434C25 /* GBAMenuScene.m */,
+				52444B461AB7688800E6FD31 /* GBAInfoScene.h */,
+				52444B471AB7688800E6FD31 /* GBAInfoScene.m */,
+				5239FA2C1A8D6AA000434C25 /* GBAGameScene.h */,
+				5239FA2D1A8D6AA000434C25 /* GBAGameScene.m */,
+				52E3DE751B34E8B700D3860F /* GBASocialScene.h */,
+				52E3DE761B34E8B700D3860F /* GBASocialScene.m */,
+				5239FA5A1A8D6B6500434C25 /* MenuParticleRain.sks */,
 				5239FA341A8D6AA000434C25 /* Main.storyboard */,
+				5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */,
 				5239FA371A8D6AA000434C25 /* Images.xcassets */,
-				5239FA391A8D6AA000434C25 /* LaunchScreen.xib */,
 				5239FA251A8D6AA000434C25 /* Supporting Files */,
 			);
 			path = "Origami Game";
@@ -104,6 +210,31 @@
 		5239FA251A8D6AA000434C25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				527283E91B49E1080071C977 /* origami-credit.png */,
+				527283EA1B49E1080071C977 /* Shopping_Cart_128.png */,
+				52E3DE781B34F77700D3860F /* facebook_background.png */,
+				52E3DE791B34F77700D3860F /* facebook.png */,
+				52E3DE7A1B34F77700D3860F /* twitter_background.png */,
+				52E3DE7B1B34F77700D3860F /* twitter.png */,
+				52444B4B1AB7805E00E6FD31 /* help-100.png */,
+				52444B491AB77DDE00E6FD31 /* info.png */,
+				5285B9301AA3E38C00286034 /* leaderboard-104.png */,
+				52E3DE711B349B2C00D3860F /* share.png */,
+				5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */,
+				5239FA5E1A8D6B7F00434C25 /* origami .wav */,
+				5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */,
+				5239FA661A8D6B9C00434C25 /* boulder.ttf */,
+				5285B9321AA3EF4900286034 /* info_filled-100.png */,
+				52E258361A9BF4790072F711 /* origami-48.png */,
+				5239FA671A8D6B9C00434C25 /* LaunchImage_Origami.png */,
+				5239FA7C1A8D793700434C25 /* LaunchImage6s.png */,
+				5239FA681A8D6B9C00434C25 /* gameOverRectangle.png */,
+				5239FA691A8D6B9C00434C25 /* shakeMessage.png */,
+				5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */,
+				5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */,
+				5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */,
+				5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */,
+				5239FA701A8D6B9C00434C25 /* play-48 copia.png */,
 				5239FA261A8D6AA000434C25 /* Info.plist */,
 				5239FA271A8D6AA000434C25 /* main.m */,
 			);
@@ -176,6 +307,12 @@
 				TargetAttributes = {
 					5239FA211A8D6AA000434C25 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = EP39PH3G3L;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					5239FA3F1A8D6AA000434C25 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -207,10 +344,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5239FA3B1A8D6AA000434C25 /* LaunchScreen.xib in Resources */,
+				5239FA791A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png in Resources */,
+				5239FA711A8D6B9C00434C25 /* boulder.ttf in Resources */,
+				5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */,
+				5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */,
+				5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */,
+				527283EB1B49E1080071C977 /* origami-credit.png in Resources */,
+				5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */,
+				5239FA7A1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png in Resources */,
+				5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */,
+				52444B4A1AB77DDE00E6FD31 /* info.png in Resources */,
 				5239FA381A8D6AA000434C25 /* Images.xcassets in Resources */,
-				5239FA301A8D6AA000434C25 /* GameScene.sks in Resources */,
+				5239FA721A8D6B9C00434C25 /* LaunchImage_Origami.png in Resources */,
+				52E3DE7C1B34F77700D3860F /* facebook_background.png in Resources */,
+				5239FA7F1A8D805C00434C25 /* LaunchScreen.xib in Resources */,
+				5239FA631A8D6B7F00434C25 /* origami .wav in Resources */,
+				5239FA731A8D6B9C00434C25 /* gameOverRectangle.png in Resources */,
+				52E3DE7E1B34F77700D3860F /* twitter_background.png in Resources */,
+				5239FA5B1A8D6B6500434C25 /* MenuParticleRain.sks in Resources */,
+				5239FA741A8D6B9C00434C25 /* shakeMessage.png in Resources */,
+				527283EC1B49E1080071C977 /* Shopping_Cart_128.png in Resources */,
+				52E3DE7D1B34F77700D3860F /* facebook.png in Resources */,
+				5239FA7B1A8D6B9C00434C25 /* play-48 copia.png in Resources */,
 				5239FA361A8D6AA000434C25 /* Main.storyboard in Resources */,
+				52E3DE721B349B2C00D3860F /* share.png in Resources */,
+				5285B9311AA3E38C00286034 /* leaderboard-104.png in Resources */,
+				52E258371A9BF4790072F711 /* origami-48.png in Resources */,
+				52E3DE7F1B34F77700D3860F /* twitter.png in Resources */,
+				52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */,
+				5239FA611A8D6B7F00434C25 /* deep-blue-sea.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5239FA331A8D6AA000434C25 /* GameViewController.m in Sources */,
+				52444B481AB7688800E6FD31 /* GBAInfoScene.m in Sources */,
+				5239FA331A8D6AA000434C25 /* GBAViewController.m in Sources */,
 				5239FA2B1A8D6AA000434C25 /* AppDelegate.m in Sources */,
-				5239FA2E1A8D6AA000434C25 /* GameScene.m in Sources */,
+				5239FA2E1A8D6AA000434C25 /* GBAGameScene.m in Sources */,
 				5239FA281A8D6AA000434C25 /* main.m in Sources */,
+				5239FA591A8D6B5700434C25 /* GBAMenuScene.m in Sources */,
+				52E3DE771B34E8B700D3860F /* GBASocialScene.m in Sources */,
+				5239FA561A8D6B4D00434C25 /* GameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,14 +426,6 @@
 				5239FA351A8D6AA000434C25 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5239FA391A8D6AA000434C25 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5239FA3A1A8D6AA000434C25 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -353,9 +511,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/facundo/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Origami Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -363,9 +530,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/facundo/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Origami Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -422,6 +598,7 @@
 				5239FA4C1A8D6AA000434C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5239FA4D1A8D6AA000434C25 /* Build configuration list for PBXNativeTarget "Origami GameTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +607,7 @@
 				5239FA4F1A8D6AA000434C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
