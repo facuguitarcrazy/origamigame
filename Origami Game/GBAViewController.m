@@ -9,8 +9,7 @@
 #import "GBAViewController.h"
 #import "GBAGameScene.h"
 #import "GBAMenuScene.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
+
 
 @implementation SKScene (Unarchive)
 
