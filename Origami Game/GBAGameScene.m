@@ -11,9 +11,6 @@
 
 #import "GBAMenuScene.h"
 #import <AVFoundation/AVFoundation.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
-
 //int score = 0;
 //int highscore;
 // int randomness;
