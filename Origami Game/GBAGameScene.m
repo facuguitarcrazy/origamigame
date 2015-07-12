@@ -18,6 +18,8 @@ BOOL direction;
 BOOL gameover;
 BOOL blackOrigami;
 BOOL share = NO;
+BOOL facebookIsSharing;
+BOOL twitterIsSharing;
 
 float difficult = 1.0f;
 float timesDifficult;
@@ -358,9 +360,13 @@ SKNode *menuItems;
 
     }
     if (CGRectContainsPoint(CGRectMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame), self.scene.size.width, self.scene.size.height), touchLocation)) {
+        
+        twitterIsSharing = YES;
+        facebookIsSharing = NO;
 
         if (share) {
-            
+            if (twitterIsSharing) {
+                
                 NSLog(@"TWITTER TOUCHED");
                 
                 
@@ -374,22 +380,29 @@ SKNode *menuItems;
                 
                 [_facebookBackground runAction:[SKAction moveToY:CGRectGetMinY(self.frame) - _facebookBackground.size.height/2 duration:0.2f]];
                 [_facebook runAction:[SKAction moveToY:CGRectGetMinY(self.frame) - _facebook.size.height/2 duration:0.2f]];
-            
+                
+            }
         }
         
     }
     
     if (CGRectContainsPoint(CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), self.scene.size.width, self.scene.size.height/2), touchLocation)) {
+        
+        facebookIsSharing = YES;
+        twitterIsSharing = NO;
+        
         if (share) {
-            NSLog(@"FACEBOOK TOUCHED");
-            
-            [_facebookBackground runAction:[SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)) duration:0.2f] completion:^{
-                [_facebookBackground runAction:[SKAction performSelector:@selector(shareFacebook) onTarget:self]];
-            }];
-            [_facebook runAction:[SKAction moveToY:CGRectGetMidY(self.frame) + CGRectGetMidY(self.frame)/6 duration:0.2f]];
-            
-            [_twitterBackground runAction:[SKAction moveToY:CGRectGetMaxY(self.frame) +_twitterBackground.size.height/2 duration:0.2f]];
-            [_twitter runAction:[SKAction moveToY:CGRectGetMaxY(self.frame) + _twitter.size.height/2 duration:0.2f]];
+            if (facebookIsSharing) {
+                NSLog(@"FACEBOOK TOUCHED");
+                
+                [_facebookBackground runAction:[SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)) duration:0.2f] completion:^{
+                    [_facebookBackground runAction:[SKAction performSelector:@selector(shareFacebook) onTarget:self]];
+                }];
+                [_facebook runAction:[SKAction moveToY:CGRectGetMidY(self.frame) + CGRectGetMidY(self.frame)/6 duration:0.2f]];
+                
+                [_twitterBackground runAction:[SKAction moveToY:CGRectGetMaxY(self.frame) +_twitterBackground.size.height/2 duration:0.2f]];
+                [_twitter runAction:[SKAction moveToY:CGRectGetMaxY(self.frame) + _twitter.size.height/2 duration:0.2f]];
+            }
         }
     }
 }
