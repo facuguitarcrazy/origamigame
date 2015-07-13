@@ -39,9 +39,9 @@
 		52444B481AB7688800E6FD31 /* GBAInfoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 52444B471AB7688800E6FD31 /* GBAInfoScene.m */; };
 		52444B4A1AB77DDE00E6FD31 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B491AB77DDE00E6FD31 /* info.png */; };
 		52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B4B1AB7805E00E6FD31 /* help-100.png */; };
+		526998BA1B54345E0090027B /* origami-credit.png in Resources */ = {isa = PBXBuildFile; fileRef = 526998B91B54345E0090027B /* origami-credit.png */; };
+		526998BC1B54357C0090027B /* shopping-cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 526998BB1B54357C0090027B /* shopping-cart.png */; };
 		526B6A681B3EF17100BAA4BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B6A671B3EF17100BAA4BA /* StoreKit.framework */; };
-		527283EB1B49E1080071C977 /* origami-credit.png in Resources */ = {isa = PBXBuildFile; fileRef = 527283E91B49E1080071C977 /* origami-credit.png */; };
-		527283EC1B49E1080071C977 /* Shopping_Cart_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 527283EA1B49E1080071C977 /* Shopping_Cart_128.png */; };
 		5285B9311AA3E38C00286034 /* leaderboard-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 5285B9301AA3E38C00286034 /* leaderboard-104.png */; };
 		5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5285B9321AA3EF4900286034 /* info_filled-100.png */; };
 		52C51B1F1B15169100EA0B4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C51B1E1B15169100EA0B4B /* Foundation.framework */; };
@@ -109,9 +109,9 @@
 		52444B471AB7688800E6FD31 /* GBAInfoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAInfoScene.m; sourceTree = "<group>"; };
 		52444B491AB77DDE00E6FD31 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		52444B4B1AB7805E00E6FD31 /* help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-100.png"; sourceTree = "<group>"; };
+		526998B91B54345E0090027B /* origami-credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-credit.png"; sourceTree = "<group>"; };
+		526998BB1B54357C0090027B /* shopping-cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-cart.png"; sourceTree = "<group>"; };
 		526B6A671B3EF17100BAA4BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		527283E91B49E1080071C977 /* origami-credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-credit.png"; sourceTree = "<group>"; };
-		527283EA1B49E1080071C977 /* Shopping_Cart_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shopping_Cart_128.png; sourceTree = "<group>"; };
 		5285B9301AA3E38C00286034 /* leaderboard-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard-104.png"; sourceTree = "<group>"; };
 		5285B9321AA3EF4900286034 /* info_filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_filled-100.png"; sourceTree = "<group>"; };
 		52C51B1E1B15169100EA0B4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -210,8 +210,8 @@
 		5239FA251A8D6AA000434C25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				527283E91B49E1080071C977 /* origami-credit.png */,
-				527283EA1B49E1080071C977 /* Shopping_Cart_128.png */,
+				526998BB1B54357C0090027B /* shopping-cart.png */,
+				526998B91B54345E0090027B /* origami-credit.png */,
 				52E3DE781B34F77700D3860F /* facebook_background.png */,
 				52E3DE791B34F77700D3860F /* facebook.png */,
 				52E3DE7A1B34F77700D3860F /* twitter_background.png */,
@@ -345,11 +345,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5239FA791A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png in Resources */,
+				526998BC1B54357C0090027B /* shopping-cart.png in Resources */,
 				5239FA711A8D6B9C00434C25 /* boulder.ttf in Resources */,
 				5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */,
 				5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */,
+				526998BA1B54345E0090027B /* origami-credit.png in Resources */,
 				5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */,
-				527283EB1B49E1080071C977 /* origami-credit.png in Resources */,
 				5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */,
 				5239FA7A1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png in Resources */,
 				5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */,
@@ -363,7 +364,6 @@
 				52E3DE7E1B34F77700D3860F /* twitter_background.png in Resources */,
 				5239FA5B1A8D6B6500434C25 /* MenuParticleRain.sks in Resources */,
 				5239FA741A8D6B9C00434C25 /* shakeMessage.png in Resources */,
-				527283EC1B49E1080071C977 /* Shopping_Cart_128.png in Resources */,
 				52E3DE7D1B34F77700D3860F /* facebook.png in Resources */,
 				5239FA7B1A8D6B9C00434C25 /* play-48 copia.png in Resources */,
 				5239FA361A8D6AA000434C25 /* Main.storyboard in Resources */,
