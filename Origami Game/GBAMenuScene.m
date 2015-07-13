@@ -73,13 +73,14 @@ NSURL *url;
         [self addChild:_infoButton];
         
         _coinStore = [[SKSpriteNode alloc] initWithImageNamed:@"origami-credit.png"];
-        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/3.25, CGRectGetMidY(self.frame)
+        
+        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/6, CGRectGetMidY(self.frame)
                                           );
-        _coinStore.size = CGSizeMake(_playButton.size.width/1.5, _playButton.size.height/1.5);
+        _coinStore.size = CGSizeMake(_playButton.size.width, _playButton.size.height);
         [self addChild:_coinStore];
         
         _store = [[SKSpriteNode alloc] initWithImageNamed:@"shopping-cart.png"];
-        _store.position = CGPointMake(CGRectGetMaxX(self.frame) - _store.size.width/4.25, _coinStore.position.y);
+        _store.position = CGPointMake(CGRectGetMaxX(self.frame) - _store.size.width/5, _coinStore.position.y);
         _store.size = _coinStore.size;
         [self addChild:_store];
         
