@@ -172,6 +172,7 @@ SKNode *menuItems;
             [self runAction:[SKAction repeatActionForever:_actionOrigami] withKey:origamiFallKey];
         
         
+        
         menuItems = [SKNode node];
         [self addChild:menuItems];
         
@@ -183,18 +184,18 @@ SKNode *menuItems;
         [menuItems addChild:_gameOverFrame];
         
         _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play-48 copia"];
-        _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/2);
+        _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMinY(self.frame) - _playButton.size.height);
         _playButton.alpha = 0;
         [menuItems addChild:_playButton];
         
         _leaderboardButton = [[SKSpriteNode alloc] initWithImageNamed:@"leaderboard-104.png"];
-        _leaderboardButton.position = CGPointMake(_playButton.position.x - _playButton.frame.size.width*2, _playButton.position.y - _leaderboardButton.frame.size.height/2.5);
+        _leaderboardButton.position = CGPointMake(CGRectGetMinX(self.frame) - _leaderboardButton.size.width, _playButton.position.y - _leaderboardButton.frame.size.height/2.5);
         _leaderboardButton.size = _playButton.size;
         _leaderboardButton.alpha = 0;
         [self addChild:_leaderboardButton];
         
         _shareButton = [[SKSpriteNode alloc] initWithImageNamed:@"share.png"];
-        _shareButton.position = CGPointMake(_playButton.position.x + _playButton.frame.size.width*2, _playButton.position.y - _shareButton.frame.size.height/2.85);
+        _shareButton.position = CGPointMake(CGRectGetMaxX(self.frame) + _shareButton.size.width, _playButton.position.y - _shareButton.frame.size.height/2.85);
         _shareButton.size = _playButton.size;
         _shareButton.alpha = 0;
         _shareButton.name = @"shareButton";
@@ -563,11 +564,25 @@ SKNode *menuItems;
     [_gameSound play];
     
     
+    //////////////////////////////////////////////////////////////// CAMBIOS DE POSICIONES  ////////////////////////////////////////////
+    //
+    // _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/2);
+    //
+    //  _leaderboardButton.position = CGPointMake(_playButton.position.x - _playButton.frame.size.width*2,
+    //  _playButton.position.y - _leaderboardButton.frame.size.height/2.5);
+    // _shareButton.position = CGPointMake(_playButton.position.x + _playButton.frame.size.width*2, _playButton.position.y -
+    // _shareButton.frame.size.height/2.85);
+    //
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     
     SKAction *showPlayButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
+    SKAction *movePlayButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/2) duration:1.0];
     SKAction *showLeaderboardButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
+    SKAction *moveLeaderboardButton = [SKAction moveTo:CGPointMake(_playButton.position.x - _playButton.frame.size.width*2, _playButton.position.y - _leaderboardButton.frame.size.height/2.5) duration:1.0];
     SKAction *showShareButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
+    SKAction *moveShareButton = [SKAction moveTo:CGPointMake(_playButton.position.x + _playButton.frame.size.width*2, _playButton.position.y -_shareButton.frame.size.height/2.85) duration:1.0];
     
     SKAction *showGameOverFrame = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *hideScoreLabel = [SKAction fadeAlphaTo:0.0 duration:.5];
@@ -578,8 +593,11 @@ SKNode *menuItems;
     
         
     [_playButton runAction:showPlayButton];
+    [_playButton runAction:movePlayButton];
     [_leaderboardButton runAction:showLeaderboardButton];
+    [_leaderboardButton runAction:moveLeaderboardButton];
     [_shareButton runAction:showShareButton];
+    [_shareButton runAction:moveShareButton];
     [_scoreLabel runAction:hideScoreLabel];
     [_scoreLabel_2 runAction:showScoreLabel_2];
     [_scoreLabel_2 runAction:moveScoreLabel_2];
