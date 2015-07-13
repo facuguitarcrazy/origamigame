@@ -22,6 +22,8 @@ NSURL *url;
 @property (nonatomic, retain)SKSpriteNode *shakeMessage;
 @property (nonatomic, retain)SKSpriteNode *coinStore;
 @property (nonatomic, retain)SKSpriteNode *store;
+@property (nonatomic, retain)SKSpriteNode *coinStoreRectangle;
+@property (nonatomic, retain)SKSpriteNode *storeRectangle;
 @property (nonatomic) BOOL gameCenterEnabled;
 
 
@@ -72,19 +74,26 @@ NSURL *url;
         _infoButton.size = _playButton.size;
         [self addChild:_infoButton];
         
-        _coinStore = [[SKSpriteNode alloc] initWithImageNamed:@"origami-credit.png"];
+        _coinStoreRectangle = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(_playButton.size.width, _playButton.size.height)];
+        _coinStoreRectangle.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStoreRectangle.size.width/2.5, CGRectGetMidY(self.frame));
+        _coinStoreRectangle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_coinStore.size];
+        [self addChild:_coinStoreRectangle];
         
-        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/6, CGRectGetMidY(self.frame)
-                                          );
+        _coinStore = [[SKSpriteNode alloc] initWithImageNamed:@"origami-credit.png"];
+        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/6, CGRectGetMidY(self.frame));
         _coinStore.size = CGSizeMake(_playButton.size.width, _playButton.size.height);
         [self addChild:_coinStore];
+        
+        _storeRectangle = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(_playButton.size.width, _playButton.size.height)];
+        _storeRectangle.position = CGPointMake(CGRectGetMaxX(self.frame) - _storeRectangle.size.width/2, CGRectGetMidY(self.frame));
+        _storeRectangle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_storeRectangle.size];
+        _storeRectangle.physicsBody.dynamic = NO;
+        [self addChild:_storeRectangle];
         
         _store = [[SKSpriteNode alloc] initWithImageNamed:@"shopping-cart.png"];
         _store.position = CGPointMake(CGRectGetMaxX(self.frame) - _store.size.width/5, _coinStore.position.y);
         _store.size = _coinStore.size;
         [self addChild:_store];
-        
-        
     
          url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"deep-blue-sea" ofType:@"wav"]];
         _sound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
@@ -101,14 +110,14 @@ NSURL *url;
         highScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         [self addChild:highScoreLabel];
         
-        /*
-        SKAction *blinkingShakeMessage = [SKAction sequence:@[
-                                                              [SKAction fadeAlphaTo:0.0 duration:0.5],
-                                                              [SKAction fadeAlphaTo:1.0 duration:0.5],
-                                                              [SKAction waitForDuration:0.25]]];
-        [_shakeMessage runAction:[SKAction repeatActionForever:blinkingShakeMessage]];
-        */
         
+        SKAction *blinkingButtons = [SKAction sequence:@[
+                                                              [SKAction fadeAlphaTo:0.0 duration:0.5],
+                                                              [SKAction fadeAlphaTo:0.7 duration:0.5],
+                                                              [SKAction waitForDuration:0.25]]];
+        [_coinStoreRectangle runAction:[SKAction repeatActionForever:blinkingButtons]];
+        
+        [_storeRectangle runAction:[SKAction repeatActionForever:blinkingButtons]];
         
          
         }
