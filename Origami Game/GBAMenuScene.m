@@ -73,7 +73,7 @@ NSURL *url;
         [self addChild:_infoButton];
         
         _coinStore = [[SKSpriteNode alloc] initWithImageNamed:@"origami-credit.png"];
-        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/3.25, CGRectGetMaxY(self.frame) - _coinStore.size.height/3
+        _coinStore.position = CGPointMake(CGRectGetMinX(self.frame) + _coinStore.size.width/3.25, CGRectGetMidY(self.frame)
                                           );
         _coinStore.size = CGSizeMake(_playButton.size.width/1.5, _playButton.size.height/1.5);
         [self addChild:_coinStore];
