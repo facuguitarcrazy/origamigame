@@ -446,6 +446,8 @@ SKNode *menuItems;
 }
 
 -(void)shareTwitter {
+    
+    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
@@ -578,11 +580,11 @@ SKNode *menuItems;
     
     
     SKAction *showPlayButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
-    SKAction *movePlayButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/2) duration:1.0];
+    SKAction *movePlayButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/1.5) duration:0.5];
     SKAction *showLeaderboardButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
-    SKAction *moveLeaderboardButton = [SKAction moveTo:CGPointMake(_playButton.position.x - _playButton.frame.size.width*2, _playButton.position.y - _leaderboardButton.frame.size.height/2.5) duration:1.0];
+    SKAction *moveLeaderboardButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame) - _playButton.frame.size.width*2.4, CGRectGetMidY(self.frame)/2 - _leaderboardButton.frame.size.height/2.5) duration:0.6];
     SKAction *showShareButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
-    SKAction *moveShareButton = [SKAction moveTo:CGPointMake(_playButton.position.x + _playButton.frame.size.width*2, _playButton.position.y -_shareButton.frame.size.height/2.85) duration:1.0];
+    SKAction *moveShareButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame) + _playButton.frame.size.width*2.3, CGRectGetMidY(self.frame)/2 -_shareButton.frame.size.height/2.85) duration:0.6];
     
     SKAction *showGameOverFrame = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *hideScoreLabel = [SKAction fadeAlphaTo:0.0 duration:.5];
@@ -604,6 +606,9 @@ SKNode *menuItems;
     [_gameOverLabel runAction:showGameOverLabel];
     [_scoreLabel_3 runAction:showScoreLabel_3];
     [_gameOverFrame runAction:showGameOverFrame];
+    
+    
+    
     
     
     
@@ -708,7 +713,7 @@ SKNode *menuItems;
     
     
     
-    NSLog(@"%.2f", difficult);
+   // NSLog(@"%.2f", difficult);
 }
 
 //GAME CENTER
