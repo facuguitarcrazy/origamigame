@@ -101,6 +101,8 @@ NSURL *url;
         _sound.numberOfLoops = -1;
         [_sound play];
         
+        
+        
         SKLabelNode *highScoreLabel = [[SKLabelNode alloc] init];
         highScoreLabel.text = [NSString stringWithFormat:@"High Score: %i", [GameState sharedInstance].highScore];
         highScoreLabel.fontName = @"Boulder";
@@ -109,6 +111,33 @@ NSURL *url;
         highScoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         highScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         [self addChild:highScoreLabel];
+        
+        SKSpriteNode *amountOfCoins = [[SKSpriteNode alloc] initWithImageNamed:@"amount-of-coins.png"];
+        amountOfCoins.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - amountOfCoins.size.height/3);
+        amountOfCoins.size = CGSizeMake(amountOfCoins.size.width/3, amountOfCoins.size.height/3);
+        [self addChild:amountOfCoins];
+        
+       // SKLabelNode *coins = [[SKSpriteNode alloc] init];
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //                                                                                              //
+        //                                                                                              //
+        //                              coins.text = // AMOUNT OF COINS HERE//                          //
+        //                                                                                              //
+        //                                                                                              //
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
         
         
         SKAction *blinkingButtons = [SKAction sequence:@[
@@ -194,7 +223,7 @@ NSURL *url;
     UITouch *touch = [touches anyObject];
     CGPoint positionInScene = [touch locationInNode:self];
     if (CGRectContainsPoint(_playButton.frame, positionInScene)) {
-        SKTransition *transicion = [SKTransition fadeWithDuration:.5f];
+        SKTransition *transicion = [SKTransition pushWithDirection:SKTransitionDirectionUp duration:.5f];
         GBAGameScene *gameScene = [[GBAGameScene alloc] initWithSize:self.size];
         [self.scene.view presentScene:gameScene transition:transicion];
         

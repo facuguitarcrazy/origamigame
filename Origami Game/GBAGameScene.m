@@ -59,6 +59,7 @@ SKNode *menuItems;
 @property(nonatomic, retain) SKSpriteNode *origami;
 @property(nonatomic, retain) SKSpriteNode *bin;
 @property(nonatomic, retain) SKSpriteNode *gameOverFrame;
+@property(nonatomic, retain) SKSpriteNode *backButton;
 @property(nonatomic, retain) SKSpriteNode *playButton;
 @property (nonatomic, retain)SKSpriteNode *leaderboardButton;
 @property(nonatomic, retain) SKSpriteNode *shareButton;
@@ -183,6 +184,12 @@ SKNode *menuItems;
         _gameOverFrame.size = CGSizeMake(_gameOverFrame.size.width/1.5, _gameOverFrame.size.height/1.5);
         [menuItems addChild:_gameOverFrame];
         
+        _backButton = [[SKSpriteNode alloc] initWithImageNamed:@"back.png"];
+        _backButton.position = CGPointMake(CGRectGetMinX(self.frame) - _backButton.frame.size.width, CGRectGetMinY(self.frame) - _backButton.frame.size.height);
+        _backButton.size = CGSizeMake(_backButton.frame.size.width/3, _backButton.frame.size.height/3);
+        _backButton.alpha = 0;
+        [self addChild:_backButton];
+        
         _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play-48 copia"];
         _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMinY(self.frame) - _playButton.size.height);
         _playButton.alpha = 0;
@@ -264,6 +271,7 @@ SKNode *menuItems;
     [_shareButton runAction:[SKAction moveToX:CGRectGetMaxX(self.frame) + _shareButton.size.width/2 duration:0.1]];
     [_leaderboardButton runAction:[SKAction moveToX:CGRectGetMinX(self.frame) - _leaderboardButton.size.width/2 duration:0.1]];
     [_playButton runAction:[SKAction moveToY:CGRectGetMinY(self.frame) - _playButton.size.height/2 duration:0.2]];
+    [_backButton runAction:[SKAction moveToY:CGRectGetMinY(self.frame) - _backButton.size.height/2 duration:0.2]];
 
 }
 
@@ -277,6 +285,12 @@ SKNode *menuItems;
     if (body && [body.node.name isEqualToString: binCategoryName]) {
         // NSLog(@"BIN TOUCHED");
         self.fingerIsOnBin = YES;
+    }
+    
+    if (CGRectContainsPoint(_backButton.frame, touchLocation)) {
+        SKTransition *transition = [SKTransition pushWithDirection:SKTransitionDirectionDown duration:0.5];
+        GBAMenuScene *menuScene = [[GBAMenuScene alloc] initWithSize:self.size];
+        [self.scene.view presentScene:menuScene transition:transition];
     }
     
     if (CGRectContainsPoint(_playButton.frame, touchLocation)) {
@@ -534,6 +548,12 @@ SKNode *menuItems;
      [_origami.userData setValue:@(YES) forKey:@"Black"];
     
      }
+    if (arc4random_uniform(10) == 0) {
+        _origami.texture = [SKTexture textureWithImageNamed:@"origami-credit.png"];
+        _origami.physicsBody.collisionBitMask = origamiCategory;
+        _origami.userData = [[NSMutableArray alloc] init];
+        [_origami.userData setValue:@(YES) forKey:@"Coin"];
+    }
     
     
     
@@ -578,6 +598,8 @@ SKNode *menuItems;
     //
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
+    SKAction *showBackButton = [SKAction fadeAlphaTo:1 duration:1];
+    SKAction *moveBackButton = [SKAction moveTo:CGPointMake(CGRectGetMinX(self.frame) + _backButton.size.width/2, CGRectGetMinY(self.frame) + _backButton.size.height/2) duration:0.3];
     
     SKAction *showPlayButton = [SKAction fadeAlphaTo:1.0 duration:1.0];
     SKAction *movePlayButton = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/1.5) duration:0.5];
@@ -593,7 +615,8 @@ SKNode *menuItems;
     SKAction *showGameOverLabel = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showScoreLabel_3 = [SKAction fadeAlphaTo:1.0 duration:1];
     
-        
+    [_backButton runAction:showBackButton];
+    [_backButton runAction:moveBackButton];
     [_playButton runAction:showPlayButton];
     [_playButton runAction:movePlayButton];
     [_leaderboardButton runAction:showLeaderboardButton];
@@ -634,13 +657,17 @@ SKNode *menuItems;
         if (collision == (origamiCategory | binCategory)) {
         if ([[firstBody.node.userData valueForKey:@"Black"] boolValue]){
             [self removeActionForKey:origamiFallKey];
-            NSLog(@"YOU LOSE");
+            // NSLog(@"YOU LOSE");
             [self gameOver];
             
             [self runAction:[SKAction sequence:@[
                                                  [SKAction waitForDuration:0.5],
                                                  [SKAction performSelector:@selector(removeOrigamiWhenLose) onTarget:self]]]];
-        } else {
+        }
+        else if ([[firstBody.node.userData valueForKey:@"Coin"] boolValue]){
+            NSLog(@"+1 ORIGAMI COIN");
+        }
+        else {
 
             [firstBody.node removeFromParent];
             [GameState sharedInstance].score++;
