@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) int score;
 @property (nonatomic, assign) int highScore;
+@property (nonatomic, assign) int coins;
 
 +(instancetype)sharedInstance;
 

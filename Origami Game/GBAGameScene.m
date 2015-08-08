@@ -54,6 +54,7 @@ SKNode *menuItems;
 @property(nonatomic, retain) SKLabelNode *scoreLabel_2;
 @property(nonatomic, retain) SKLabelNode *gameOverLabel;
 @property(nonatomic, retain) SKLabelNode *scoreLabel_3;
+@property(nonatomic, retain) SKLabelNode *amountOfCoins;
 
 // @property(nonatomic, strong) SKLabelNode *highScoreLabel;
 @property(nonatomic, retain) SKSpriteNode *origami;
@@ -241,6 +242,7 @@ SKNode *menuItems;
         
         
         
+        
      //   difficultTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(increaseDifficult) userInfo:nil repeats:YES];
         
         if (gameover) {
@@ -305,6 +307,7 @@ SKNode *menuItems;
             [GameState sharedInstance].score = 0;
             _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
             _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+        
             
             
             
@@ -551,7 +554,7 @@ SKNode *menuItems;
     if (arc4random_uniform(10) == 0) {
         _origami.texture = [SKTexture textureWithImageNamed:@"origami-credit.png"];
         _origami.physicsBody.collisionBitMask = origamiCategory;
-        _origami.userData = [[NSMutableArray alloc] init];
+        _origami.userData = [[NSMutableDictionary alloc] init];
         [_origami.userData setValue:@(YES) forKey:@"Coin"];
     }
     
@@ -665,7 +668,21 @@ SKNode *menuItems;
                                                  [SKAction performSelector:@selector(removeOrigamiWhenLose) onTarget:self]]]];
         }
         else if ([[firstBody.node.userData valueForKey:@"Coin"] boolValue]){
-            NSLog(@"+1 ORIGAMI COIN");
+            
+            [firstBody.node removeFromParent];
+            
+            _amountOfCoins = [[SKLabelNode alloc] init];
+            _amountOfCoins.text = @"+1";
+            _amountOfCoins.fontColor = [UIColor colorWithRed:0.92 green:0.74 blue:0.10 alpha:1.0];
+            _amountOfCoins.fontSize = 32;
+            _amountOfCoins.fontName = @"Helvetica Neue";
+            _amountOfCoins.position =  CGPointMake(_bin.position.x, _bin.frame.size.height);
+            [self addChild:_amountOfCoins];
+            
+            [_amountOfCoins runAction:[SKAction moveByX:0 y:75 duration:1]];
+            [_amountOfCoins runAction:[SKAction fadeAlphaTo:0.0 duration:1]];
+            
+            [GameState sharedInstance].coins++;
         }
         else {
 
@@ -677,7 +694,6 @@ SKNode *menuItems;
             gameUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"origami " ofType:@"wav"]];
             _gameSound = [[AVAudioPlayer alloc] initWithContentsOfURL:gameUrl error:nil];
             _gameSound.delegate = self;
-            
             [_gameSound play];
 
         }
