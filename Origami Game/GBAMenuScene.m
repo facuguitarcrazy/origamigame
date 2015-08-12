@@ -100,8 +100,7 @@ NSURL *url;
         _sound.delegate = self;
         _sound.numberOfLoops = -1;
         [_sound play];
-        
-        
+    
         
         SKLabelNode *highScoreLabel = [[SKLabelNode alloc] init];
         highScoreLabel.text = [NSString stringWithFormat:@"High Score: %i", [GameState sharedInstance].highScore];
