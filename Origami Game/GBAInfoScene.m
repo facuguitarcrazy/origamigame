@@ -13,7 +13,7 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        SKSpriteNode *info = [[SKSpriteNode alloc] initWithImageNamed:@"info.png"];
+        SKSpriteNode *info = [[SKSpriteNode alloc] initWithImageNamed:@"info-screen.png"];
         info.size = CGSizeMake(self.scene.size.width, self.scene.size.height);
         info.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         [self addChild:info];

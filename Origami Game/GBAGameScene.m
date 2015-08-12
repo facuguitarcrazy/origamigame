@@ -195,8 +195,9 @@ SKNode *menuItems;
         _backButton.alpha = 0;
         [self addChild:_backButton];
         
-        _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play-48 copia"];
+        _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play.png"];
         _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMinY(self.frame) - _playButton.size.height);
+        _playButton.size = CGSizeMake(48, 48);
         _playButton.alpha = 0;
         [menuItems addChild:_playButton];
         

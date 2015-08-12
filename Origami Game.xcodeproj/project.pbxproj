@@ -13,6 +13,9 @@
 		4E52E87E1B7AC80A00D8A846 /* playtime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8F1B71248300534B61 /* playtime.otf */; };
 		4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */; };
 		4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */; };
+		5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5A1B7B70390060502F /* origamiTitle.png */; };
+		5227AB5E1B7B72100060502F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5D1B7B72100060502F /* play.png */; };
+		5227AB601B7B73A40060502F /* info-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5F1B7B73A40060502F /* info-screen.png */; };
 		5239FA281A8D6AA000434C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA271A8D6AA000434C25 /* main.m */; };
 		5239FA2B1A8D6AA000434C25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA2A1A8D6AA000434C25 /* AppDelegate.m */; };
 		5239FA2E1A8D6AA000434C25 /* GBAGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239FA2D1A8D6AA000434C25 /* GBAGameScene.m */; };
@@ -34,12 +37,9 @@
 		5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */; };
 		5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */; };
 		5239FA791A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */; };
-		5239FA7A1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */; };
-		5239FA7B1A8D6B9C00434C25 /* play-48 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA701A8D6B9C00434C25 /* play-48 copia.png */; };
 		5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA7C1A8D793700434C25 /* LaunchImage6s.png */; };
 		5239FA7F1A8D805C00434C25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */; };
 		52444B481AB7688800E6FD31 /* GBAInfoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 52444B471AB7688800E6FD31 /* GBAInfoScene.m */; };
-		52444B4A1AB77DDE00E6FD31 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B491AB77DDE00E6FD31 /* info.png */; };
 		52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 52444B4B1AB7805E00E6FD31 /* help-100.png */; };
 		526B6A681B3EF17100BAA4BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B6A671B3EF17100BAA4BA /* StoreKit.framework */; };
 		5285B9311AA3E38C00286034 /* leaderboard-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 5285B9301AA3E38C00286034 /* leaderboard-104.png */; };
@@ -74,6 +74,9 @@
 		4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amount_of_coins.png; sourceTree = "<group>"; };
 		4EED7F8E1B71117000534B61 /* game_sans_serif_7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_sans_serif_7.ttf; sourceTree = "<group>"; };
 		4EED7F8F1B71248300534B61 /* playtime.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = playtime.otf; sourceTree = "<group>"; };
+		5227AB5A1B7B70390060502F /* origamiTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = origamiTitle.png; sourceTree = "<group>"; };
+		5227AB5D1B7B72100060502F /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		5227AB5F1B7B73A40060502F /* info-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-screen.png"; sourceTree = "<group>"; };
 		5239FA221A8D6AA000434C25 /* Origami Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Origami Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239FA261A8D6AA000434C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5239FA271A8D6AA000434C25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,13 +107,10 @@
 		5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOverImage.png; sourceTree = "<group>"; };
 		5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_trash-128 20-32-54-064 20-43-37-238 copia.png"; sourceTree = "<group>"; };
 		5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-50 20-43-37-341 copia.png"; sourceTree = "<group>"; };
-		5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrigamiTitleMenuFrame.png; sourceTree = "<group>"; };
-		5239FA701A8D6B9C00434C25 /* play-48 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-48 copia.png"; sourceTree = "<group>"; };
 		5239FA7C1A8D793700434C25 /* LaunchImage6s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage6s.png; sourceTree = "<group>"; };
 		5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		52444B461AB7688800E6FD31 /* GBAInfoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAInfoScene.h; sourceTree = "<group>"; };
 		52444B471AB7688800E6FD31 /* GBAInfoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAInfoScene.m; sourceTree = "<group>"; };
-		52444B491AB77DDE00E6FD31 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		52444B4B1AB7805E00E6FD31 /* help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-100.png"; sourceTree = "<group>"; };
 		526B6A671B3EF17100BAA4BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5285B9301AA3E38C00286034 /* leaderboard-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard-104.png"; sourceTree = "<group>"; };
@@ -220,11 +220,12 @@
 				4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */,
 				52E3B5AE1B544EE6009F7765 /* shopping-cart.png */,
 				52E3DE781B34F77700D3860F /* facebook_background.png */,
+				5227AB5F1B7B73A40060502F /* info-screen.png */,
 				52E3DE791B34F77700D3860F /* facebook.png */,
 				52E3DE7A1B34F77700D3860F /* twitter_background.png */,
 				52E3DE7B1B34F77700D3860F /* twitter.png */,
+				5227AB5A1B7B70390060502F /* origamiTitle.png */,
 				52444B4B1AB7805E00E6FD31 /* help-100.png */,
-				52444B491AB77DDE00E6FD31 /* info.png */,
 				5285B9301AA3E38C00286034 /* leaderboard-104.png */,
 				52E3DE711B349B2C00D3860F /* share.png */,
 				5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */,
@@ -239,8 +240,7 @@
 				5239FA6A1A8D6B9C00434C25 /* GameOverImage.png */,
 				5239FA6C1A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png */,
 				5239FA6E1A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png */,
-				5239FA6F1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png */,
-				5239FA701A8D6B9C00434C25 /* play-48 copia.png */,
+				5227AB5D1B7B72100060502F /* play.png */,
 				5239FA261A8D6AA000434C25 /* Info.plist */,
 				5239FA271A8D6AA000434C25 /* main.m */,
 			);
@@ -351,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5239FA791A8D6B9C00434C25 /* origami-50 20-43-37-341 copia.png in Resources */,
+				5227AB5E1B7B72100060502F /* play.png in Resources */,
 				4E52E87E1B7AC80A00D8A846 /* playtime.otf in Resources */,
 				52E3B5AF1B544EE6009F7765 /* shopping-cart.png in Resources */,
 				5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */,
@@ -358,14 +359,13 @@
 				5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */,
 				5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */,
 				5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */,
-				5239FA7A1A8D6B9C00434C25 /* OrigamiTitleMenuFrame.png in Resources */,
 				5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */,
-				52444B4A1AB77DDE00E6FD31 /* info.png in Resources */,
 				5239FA381A8D6AA000434C25 /* Images.xcassets in Resources */,
 				5239FA721A8D6B9C00434C25 /* LaunchImage_Origami.png in Resources */,
 				52E3DE7C1B34F77700D3860F /* facebook_background.png in Resources */,
 				5239FA7F1A8D805C00434C25 /* LaunchScreen.xib in Resources */,
 				4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */,
+				5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */,
 				5239FA631A8D6B7F00434C25 /* origami .wav in Resources */,
 				4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */,
 				5239FA731A8D6B9C00434C25 /* gameOverRectangle.png in Resources */,
@@ -375,7 +375,6 @@
 				4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */,
 				4E453BA71B63F12600E8E944 /* back.png in Resources */,
 				52E3DE7D1B34F77700D3860F /* facebook.png in Resources */,
-				5239FA7B1A8D6B9C00434C25 /* play-48 copia.png in Resources */,
 				5239FA361A8D6AA000434C25 /* Main.storyboard in Resources */,
 				52E3DE721B349B2C00D3860F /* share.png in Resources */,
 				4E52E87C1B7AC7FC00D8A846 /* game_sans_serif_7.ttf in Resources */,
@@ -384,6 +383,7 @@
 				52E3DE7F1B34F77700D3860F /* twitter.png in Resources */,
 				52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */,
 				5239FA611A8D6B7F00434C25 /* deep-blue-sea.wav in Resources */,
+				5227AB601B7B73A40060502F /* info-screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

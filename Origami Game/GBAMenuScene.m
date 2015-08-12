@@ -51,8 +51,9 @@ NSURL *url;
         particle.alpha = 0.3;
         [self addChild:particle];
         
-        _origamiTitle = [[SKSpriteNode alloc] initWithImageNamed:@"OrigamiTitleMenuFrame.png"];
+        _origamiTitle = [[SKSpriteNode alloc] initWithImageNamed:@"origamiTitle.png"];
         _origamiTitle.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+ CGRectGetMidY(self.frame)/2);
+        _origamiTitle.size = CGSizeMake(320, self.frame.size.height/ ((self.frame.size.height)/100));
         [self addChild:_origamiTitle];
         
        /* _shakeMessage = [[SKSpriteNode alloc] initWithImageNamed:@"shakeMessage.png"];
@@ -60,8 +61,9 @@ NSURL *url;
         [self addChild:_shakeMessage];
         
         */
-        _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play-48 copia.png"];
+        _playButton = [[SKSpriteNode alloc] initWithImageNamed:@"play.png"];
         _playButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)/2);
+        _playButton.size = CGSizeMake(48, 48);
         [self addChild:_playButton];
         
         _leaderboardButton = [[SKSpriteNode alloc] initWithImageNamed:@"leaderboard-104.png"];
