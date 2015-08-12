@@ -112,7 +112,7 @@ NSURL *url;
         highScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         [self addChild:highScoreLabel];
         
-        SKSpriteNode *amountOfCoins = [[SKSpriteNode alloc] initWithImageNamed:@"amount-of-coins.png"];
+        SKSpriteNode *amountOfCoins = [[SKSpriteNode alloc] initWithImageNamed:@"amount_of_coins.png"];
         amountOfCoins.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - amountOfCoins.size.height/3);
         amountOfCoins.size = CGSizeMake(amountOfCoins.size.width/3, amountOfCoins.size.height/3);
         [self addChild:amountOfCoins];
@@ -125,6 +125,12 @@ NSURL *url;
         coins.fontSize = 50;
         [self addChild:coins];
         
+        SKSpriteNode *roundedRectangle = [[SKSpriteNode alloc] initWithImageNamed:@"rounded-rectangle.png"];
+        roundedRectangle.position = CGPointMake(coins.position.x, coins.position.y + (amountOfCoins.position.y-coins.position.y*1.12-2));
+        roundedRectangle.size = CGSizeMake(self.frame.size.width/2, self.frame.size.height/6);
+        [self addChild:roundedRectangle];
+                                                                    
+                                        
         
         SKAction *blinkingButtons = [SKAction sequence:@[
                                                               [SKAction fadeAlphaTo:0.0 duration:0.5],

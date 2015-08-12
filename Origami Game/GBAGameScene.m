@@ -20,6 +20,7 @@ BOOL blackOrigami;
 BOOL share = NO;
 BOOL facebookIsSharing;
 BOOL twitterIsSharing;
+BOOL stopDifficult;
 
 float difficult = 1.0f;
 float timesDifficult;
@@ -166,7 +167,10 @@ SKNode *menuItems;
                                                   [SKAction waitForDuration:0.4],
                                                   [SKAction runBlock:^{
                 if (gameover == NO) {
-                    difficult -= 0.01;
+                    if (!stopDifficult) {
+                        difficult -= 0.01;
+                    }
+                    
                 }else {
                     
                 }
@@ -675,7 +679,7 @@ SKNode *menuItems;
             _amountOfCoins.text = @"+1";
             _amountOfCoins.fontColor = [UIColor colorWithRed:0.92 green:0.74 blue:0.10 alpha:1.0];
             _amountOfCoins.fontSize = 32;
-            _amountOfCoins.fontName = @"Helvetica Neue";
+            _amountOfCoins.fontName = @"Game Sans Serif 7";
             _amountOfCoins.position =  CGPointMake(_bin.position.x, _bin.frame.size.height);
             [self addChild:_amountOfCoins];
             
@@ -700,6 +704,9 @@ SKNode *menuItems;
     }
     if (collision == (bottomCategory | origamiCategory)) {
         if ([[firstBody.node.userData valueForKey:@"Black"] boolValue]){
+            return;
+        }
+        else if ([[firstBody.node.userData valueForKey:@"Coin"] boolValue]){
             return;
         }else {
 
@@ -754,9 +761,13 @@ SKNode *menuItems;
         difficult = 1.0f;
     }
     
+    if(difficult < 0.41) {
+        stopDifficult = YES;
+    }else {
+        stopDifficult = NO;
+    }
     
-    
-   // NSLog(@"%.2f", difficult);
+    NSLog(@"%.2f", difficult);
 }
 
 //GAME CENTER
