@@ -9,6 +9,8 @@
 #import "GBAMenuScene.h"
 #import "GBAGameScene.h"
 #import "GBAInfoScene.h"
+#import "GBAStoreScene.h"
+#import "GBACoinScene.h"
 
 NSURL *url;
 
@@ -230,6 +232,17 @@ NSURL *url;
         SKTransition *transicion = [SKTransition doorsCloseHorizontalWithDuration:1];
         GBAInfoScene *infoScene = [[GBAInfoScene alloc] initWithSize:self.size];
         [self.scene.view presentScene:infoScene transition:transicion];
+    }
+    if (CGRectContainsPoint(_store.frame, positionInScene)) {
+        SKTransition *transicion = [SKTransition pushWithDirection:SKTransitionDirectionLeft duration:.5f];
+        GBAStoreScene *storeScene = [[GBAStoreScene alloc] initWithSize:self.size];
+        [self.scene.view presentScene:storeScene transition:transicion];
+    }
+    if (CGRectContainsPoint(_coinStore.frame, positionInScene)) {
+        SKTransition *transicion = [SKTransition pushWithDirection:SKTransitionDirectionRight duration:.5f];
+        GBACoinScene *coinScene = [[GBACoinScene alloc] initWithSize:self.size];
+        [self.scene.view presentScene:coinScene transition:transicion];
+        
     }
     
 }

@@ -295,6 +295,7 @@ SKNode *menuItems;
     }
     
     if (CGRectContainsPoint(_backButton.frame, touchLocation)) {
+        [GameState sharedInstance].score = 0;
         SKTransition *transition = [SKTransition pushWithDirection:SKTransitionDirectionDown duration:0.5];
         GBAMenuScene *menuScene = [[GBAMenuScene alloc] initWithSize:self.size];
         [self.scene.view presentScene:menuScene transition:transition];

@@ -37,6 +37,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>KeepCalm-Medium.ttf</string>
 		<string>boulder.ttf</string>
 		<string>game_sans_serif_7.ttf</string>
 	</array>

@@ -12,7 +12,10 @@
 		4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E453BA81B64166B00E8E944 /* boulder.ttf */; };
 		4E52E87E1B7AC80A00D8A846 /* playtime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8F1B71248300534B61 /* playtime.otf */; };
 		4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */; };
+		4EAD3BB91B82702F000EB10B /* GBAStoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */; };
 		4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */; };
+		4EE9E99A1B8E07E90026899B /* KeepCalm-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */; };
+		4EE9E99D1B8E0B760026899B /* GBACoinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E99C1B8E0B760026899B /* GBACoinScene.m */; };
 		5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5A1B7B70390060502F /* origamiTitle.png */; };
 		5227AB5E1B7B72100060502F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5D1B7B72100060502F /* play.png */; };
 		5227AB601B7B73A40060502F /* info-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5F1B7B73A40060502F /* info-screen.png */; };
@@ -71,7 +74,12 @@
 		4E453BA61B63F12600E8E944 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		4E453BA81B64166B00E8E944 /* boulder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = boulder.ttf; sourceTree = "<group>"; };
 		4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded-rectangle.png"; sourceTree = "<group>"; };
+		4EAD3BB71B82702F000EB10B /* GBAStoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAStoreScene.h; path = ../GBAStoreScene.h; sourceTree = "<group>"; };
+		4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBAStoreScene.m; path = ../GBAStoreScene.m; sourceTree = "<group>"; };
 		4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amount_of_coins.png; sourceTree = "<group>"; };
+		4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KeepCalm-Medium.ttf"; sourceTree = "<group>"; };
+		4EE9E99B1B8E0B760026899B /* GBACoinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBACoinScene.h; sourceTree = "<group>"; };
+		4EE9E99C1B8E0B760026899B /* GBACoinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBACoinScene.m; sourceTree = "<group>"; };
 		4EED7F8E1B71117000534B61 /* game_sans_serif_7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_sans_serif_7.ttf; sourceTree = "<group>"; };
 		4EED7F8F1B71248300534B61 /* playtime.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = playtime.otf; sourceTree = "<group>"; };
 		5227AB5A1B7B70390060502F /* origamiTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = origamiTitle.png; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 		4E52E87B1B7AC78100D8A846 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */,
 				4EED7F8E1B71117000534B61 /* game_sans_serif_7.ttf */,
 				4EED7F8F1B71248300534B61 /* playtime.otf */,
 				4E453BA81B64166B00E8E944 /* boulder.ttf */,
@@ -201,6 +210,10 @@
 				52444B471AB7688800E6FD31 /* GBAInfoScene.m */,
 				5239FA2C1A8D6AA000434C25 /* GBAGameScene.h */,
 				5239FA2D1A8D6AA000434C25 /* GBAGameScene.m */,
+				4EAD3BB71B82702F000EB10B /* GBAStoreScene.h */,
+				4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */,
+				4EE9E99B1B8E0B760026899B /* GBACoinScene.h */,
+				4EE9E99C1B8E0B760026899B /* GBACoinScene.m */,
 				5239FA5A1A8D6B6500434C25 /* MenuParticleRain.sks */,
 				5239FA341A8D6AA000434C25 /* Main.storyboard */,
 				5239FA7E1A8D805C00434C25 /* LaunchScreen.xib */,
@@ -357,6 +370,7 @@
 				5239FA7D1A8D793800434C25 /* LaunchImage6s.png in Resources */,
 				52E3B5B11B544F3F009F7765 /* origami-credit.png in Resources */,
 				5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */,
+				4EE9E99A1B8E07E90026899B /* KeepCalm-Medium.ttf in Resources */,
 				5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */,
 				5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */,
 				5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */,
@@ -404,10 +418,12 @@
 				52444B481AB7688800E6FD31 /* GBAInfoScene.m in Sources */,
 				5239FA331A8D6AA000434C25 /* GBAViewController.m in Sources */,
 				5239FA2B1A8D6AA000434C25 /* AppDelegate.m in Sources */,
+				4EE9E99D1B8E0B760026899B /* GBACoinScene.m in Sources */,
 				5239FA2E1A8D6AA000434C25 /* GBAGameScene.m in Sources */,
 				5239FA281A8D6AA000434C25 /* main.m in Sources */,
 				5239FA591A8D6B5700434C25 /* GBAMenuScene.m in Sources */,
 				5239FA561A8D6B4D00434C25 /* GameState.m in Sources */,
+				4EAD3BB91B82702F000EB10B /* GBAStoreScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
