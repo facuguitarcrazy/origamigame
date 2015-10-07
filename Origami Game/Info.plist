@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.facundoschiavoni.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -38,6 +38,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>KeepCalm-Medium.ttf</string>
+		<string>playtime.otf</string>
 		<string>boulder.ttf</string>
 		<string>game_sans_serif_7.ttf</string>
 	</array>

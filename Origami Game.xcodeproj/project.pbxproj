@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4E453BA71B63F12600E8E944 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E453BA61B63F12600E8E944 /* back.png */; };
+		4E4BA9841BBD925800A17562 /* save-me-cost.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BA9831BBD925800A17562 /* save-me-cost.png */; settings = {ASSET_TAGS = (); }; };
 		4E52E87C1B7AC7FC00D8A846 /* game_sans_serif_7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8E1B71117000534B61 /* game_sans_serif_7.ttf */; };
 		4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E453BA81B64166B00E8E944 /* boulder.ttf */; };
 		4E52E87E1B7AC80A00D8A846 /* playtime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8F1B71248300534B61 /* playtime.otf */; };
 		4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */; };
 		4EAD3BB91B82702F000EB10B /* GBAStoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */; };
 		4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */; };
+		4ED8E95F1BBD95DA00828790 /* save-me-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED8E95E1BBD95DA00828790 /* save-me-frame.png */; settings = {ASSET_TAGS = (); }; };
 		4EE9E99A1B8E07E90026899B /* KeepCalm-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */; };
 		4EE9E99D1B8E0B760026899B /* GBACoinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E99C1B8E0B760026899B /* GBACoinScene.m */; };
 		5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5A1B7B70390060502F /* origamiTitle.png */; };
@@ -73,10 +75,12 @@
 /* Begin PBXFileReference section */
 		4E453BA61B63F12600E8E944 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		4E453BA81B64166B00E8E944 /* boulder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = boulder.ttf; sourceTree = "<group>"; };
+		4E4BA9831BBD925800A17562 /* save-me-cost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-me-cost.png"; sourceTree = "<group>"; };
 		4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded-rectangle.png"; sourceTree = "<group>"; };
 		4EAD3BB71B82702F000EB10B /* GBAStoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAStoreScene.h; path = ../GBAStoreScene.h; sourceTree = "<group>"; };
 		4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBAStoreScene.m; path = ../GBAStoreScene.m; sourceTree = "<group>"; };
 		4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amount_of_coins.png; sourceTree = "<group>"; };
+		4ED8E95E1BBD95DA00828790 /* save-me-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-me-frame.png"; sourceTree = "<group>"; };
 		4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KeepCalm-Medium.ttf"; sourceTree = "<group>"; };
 		4EE9E99B1B8E0B760026899B /* GBACoinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBACoinScene.h; sourceTree = "<group>"; };
 		4EE9E99C1B8E0B760026899B /* GBACoinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBACoinScene.m; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				52E3DE7A1B34F77700D3860F /* twitter_background.png */,
 				52E3DE7B1B34F77700D3860F /* twitter.png */,
 				5227AB5A1B7B70390060502F /* origamiTitle.png */,
+				4ED8E95E1BBD95DA00828790 /* save-me-frame.png */,
 				52444B4B1AB7805E00E6FD31 /* help-100.png */,
 				5285B9301AA3E38C00286034 /* leaderboard-104.png */,
 				52E3DE711B349B2C00D3860F /* share.png */,
@@ -246,6 +251,7 @@
 				5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */,
 				5285B9321AA3EF4900286034 /* info_filled-100.png */,
 				52E258361A9BF4790072F711 /* origami-48.png */,
+				4E4BA9831BBD925800A17562 /* save-me-cost.png */,
 				5239FA671A8D6B9C00434C25 /* LaunchImage_Origami.png */,
 				5239FA7C1A8D793700434C25 /* LaunchImage6s.png */,
 				5239FA681A8D6B9C00434C25 /* gameOverRectangle.png */,
@@ -321,7 +327,7 @@
 		5239FA1A1A8D6AA000434C25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Facundo Schiavoni";
 				TargetAttributes = {
 					5239FA211A8D6AA000434C25 = {
@@ -383,9 +389,11 @@
 				5239FA631A8D6B7F00434C25 /* origami .wav in Resources */,
 				4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */,
 				5239FA731A8D6B9C00434C25 /* gameOverRectangle.png in Resources */,
+				4ED8E95F1BBD95DA00828790 /* save-me-frame.png in Resources */,
 				52E3DE7E1B34F77700D3860F /* twitter_background.png in Resources */,
 				5239FA5B1A8D6B6500434C25 /* MenuParticleRain.sks in Resources */,
 				5239FA741A8D6B9C00434C25 /* shakeMessage.png in Resources */,
+				4E4BA9841BBD925800A17562 /* save-me-cost.png in Resources */,
 				4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */,
 				4E453BA71B63F12600E8E944 /* back.png in Resources */,
 				52E3DE7D1B34F77700D3860F /* facebook.png in Resources */,
@@ -477,6 +485,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -547,6 +556,7 @@
 				INFOPLIST_FILE = "Origami Game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facundoschiavoni.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -566,6 +576,7 @@
 				INFOPLIST_FILE = "Origami Game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facundoschiavoni.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -585,6 +596,7 @@
 				);
 				INFOPLIST_FILE = "Origami GameTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facundoschiavoni.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Origami Game.app/Origami Game";
 			};
@@ -600,6 +612,7 @@
 				);
 				INFOPLIST_FILE = "Origami GameTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facundoschiavoni.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Origami Game.app/Origami Game";
 			};

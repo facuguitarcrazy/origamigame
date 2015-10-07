@@ -22,11 +22,14 @@ BOOL facebookIsSharing;
 BOOL twitterIsSharing;
 BOOL stopDifficult;
 
+
 float difficult = 1.0f;
 float timesDifficult;
+float countdown = 4.0f;
 CGFloat bounceFactor = 0.2f;
 CGFloat halfScreen;
 NSTimer *difficultTimer;
+NSTimer  *timer;
 static NSString *origamiCategoryName = @"origami";
 static NSString *binCategoryName = @"bin";
 static NSString *origamiFallKey = @"origamiFall";
@@ -56,6 +59,10 @@ SKNode *menuItems;
 @property(nonatomic, retain) SKLabelNode *gameOverLabel;
 @property(nonatomic, retain) SKLabelNode *scoreLabel_3;
 @property(nonatomic, retain) SKLabelNode *amountOfCoins;
+@property(nonatomic, retain) SKLabelNode *continueLabel;
+// @property(nonatomic, retain) SKLabelNode *continueTimer;
+@property(nonatomic, retain) SKSpriteNode *saveMeCost;
+@property(nonatomic, retain) SKSpriteNode *saveMeFrame;
 
 // @property(nonatomic, strong) SKLabelNode *highScoreLabel;
 @property(nonatomic, retain) SKSpriteNode *origami;
@@ -93,6 +100,7 @@ SKNode *menuItems;
 - (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]){
     
+
         
         self.backgroundColor = [SKColor whiteColor];
         self.physicsWorld.gravity = CGVectorMake(0.0f, 0.0f);
@@ -245,9 +253,36 @@ SKNode *menuItems;
         _scoreLabel_3.alpha = 0.0;
         [self addChild:_scoreLabel_3];
         
+        _continueLabel = [[SKLabelNode alloc] init];
+        _continueLabel.text = @"Save me ?";
+        _continueLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
+        _continueLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        _continueLabel.fontName = @"Keep Calm";
+        _continueLabel.fontSize = 20;
+        _continueLabel.fontColor = [SKColor blackColor];
+        _continueLabel.alpha = 0.0;
+        [self addChild:_continueLabel];
         
+        _saveMeCost = [[SKSpriteNode alloc] initWithImageNamed:@"save-me-cost.png"];
+        _saveMeCost.position = CGPointMake(CGRectGetMidX(self.frame), _continueLabel.position.y - _continueLabel.frame.size.width/5);
+        _saveMeCost.size = CGSizeMake(CGRectGetMaxX(self.frame)/4, _playButton.size.height);
+        [self addChild:_saveMeCost];
         
+        _saveMeFrame = [[SKSpriteNode alloc] initWithImageNamed:@"save-me-frame.png"];
+        _saveMeFrame.position = CGPointMake(_saveMeCost.position.x, _saveMeCost.position.y);
+        [self addChild:_saveMeFrame];
         
+ /*     *****CONTINUE TIMER******
+  _continueTimer = [[SKLabelNode alloc] init];
+
+        _continueTimer.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
+        _continueTimer.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - _continueTimer.frame.size.height);
+        _continueTimer.fontName = @"Playtime";
+        _continueTimer.fontSize = 35;
+        _continueTimer.fontColor = [SKColor blackColor];
+        [self addChild:_continueTimer];
+   
+  */
      //   difficultTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(increaseDifficult) userInfo:nil repeats:YES];
         
         if (gameover) {
@@ -265,9 +300,10 @@ SKNode *menuItems;
  */
 -(void)resetScene {
     // [self runAction:[SKAction repeatActionForever:_actionOrigami]];
-    
+    // [timer invalidate];
+    // countdown = 4.0f;
     gameover = NO;
-    NSLog(@"GAME OVER");
+
     SKScene *scene = [[GBAGameScene alloc] initWithSize:self.size];
     SKTransition *transition = [SKTransition fadeWithDuration:0.5];
     [self.view presentScene:scene transition:transition];
@@ -307,6 +343,9 @@ SKNode *menuItems;
                 [self resetScene];
                 
                 
+                
+                
+                
             }
             [_playButton removeFromParent];
             
@@ -323,7 +362,8 @@ SKNode *menuItems;
         
     }
     if (CGRectContainsPoint(_leaderboardButton.frame, touchLocation)) {
-
+        
+            [GameState sharedInstance].score = 0;
             [self reportScore];
             [self showLeaderboardAndAchievements:YES];
 
@@ -332,7 +372,7 @@ SKNode *menuItems;
     if ([node.name isEqualToString:@"shareButton"]) {
         
         
-        
+        [GameState sharedInstance].score = 0;
         
         [node runAction:[SKAction runBlock:^{
             // TWITTER ACTIONS
@@ -576,7 +616,19 @@ SKNode *menuItems;
     
     
 }
+/*
+            ****COUNTDOWN*****
+ 
+-(void) countDown {
+    if (countdown > 0.01) {
+        countdown -= 0.01;
+    }
+    
+    _continueTimer.text = [NSString stringWithFormat:@"%.2f", countdown];
+    _continueTimer.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - _continueTimer.frame.size.height);
+}
 
+*/
 
 -(void) gameOver {
     
@@ -623,6 +675,7 @@ SKNode *menuItems;
     SKAction *moveScoreLabel_2 = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), _scoreLabel_3.position.y - _scoreLabel_3.frame.size.height - _scoreLabel_3.frame.size.height/2) duration:1];
     SKAction *showGameOverLabel = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showScoreLabel_3 = [SKAction fadeAlphaTo:1.0 duration:1];
+    SKAction *showContinueLabel = [SKAction fadeAlphaTo:1.0 duration:1];
     
     [_backButton runAction:showBackButton];
     [_backButton runAction:moveBackButton];
@@ -638,10 +691,14 @@ SKNode *menuItems;
     [_gameOverLabel runAction:showGameOverLabel];
     [_scoreLabel_3 runAction:showScoreLabel_3];
     [_gameOverFrame runAction:showGameOverFrame];
+    [_continueLabel runAction:showContinueLabel];
     
     
-    
-    
+
+    /*      ****COUNTDOWN****
+
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+*/
     
     
     
