@@ -254,9 +254,9 @@ SKNode *menuItems;
         [self addChild:_scoreLabel_3];
         
         _continueLabel = [[SKLabelNode alloc] init];
-        _continueLabel.text = @"Save me ?";
+        _continueLabel.text = @"Save me";
         _continueLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
-        _continueLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        _continueLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)*1.03);
         _continueLabel.fontName = @"Keep Calm";
         _continueLabel.fontSize = 20;
         _continueLabel.fontColor = [SKColor blackColor];
@@ -264,12 +264,14 @@ SKNode *menuItems;
         [self addChild:_continueLabel];
         
         _saveMeCost = [[SKSpriteNode alloc] initWithImageNamed:@"save-me-cost.png"];
-        _saveMeCost.position = CGPointMake(CGRectGetMidX(self.frame), _continueLabel.position.y - _continueLabel.frame.size.width/5);
-        _saveMeCost.size = CGSizeMake(CGRectGetMaxX(self.frame)/4, _playButton.size.height);
+        _saveMeCost.position = CGPointMake(CGRectGetMidX(self.frame), _continueLabel.position.y - _continueLabel.frame.size.width/4);
+        _saveMeCost.size = CGSizeMake(CGRectGetMaxX(self.frame)/4, _playButton.size.height/1.1);
+        _saveMeCost.alpha = 0.0;
         [self addChild:_saveMeCost];
         
         _saveMeFrame = [[SKSpriteNode alloc] initWithImageNamed:@"save-me-frame.png"];
-        _saveMeFrame.position = CGPointMake(_saveMeCost.position.x, _saveMeCost.position.y);
+        _saveMeFrame.position = CGPointMake(_saveMeCost.position.x, _continueLabel.position.y - _saveMeCost.frame.size.height/3);
+        _saveMeFrame.alpha = 0.0;
         [self addChild:_saveMeFrame];
         
  /*     *****CONTINUE TIMER******
@@ -676,6 +678,8 @@ SKNode *menuItems;
     SKAction *showGameOverLabel = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showScoreLabel_3 = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showContinueLabel = [SKAction fadeAlphaTo:1.0 duration:1];
+    SKAction *showSaveMeCost = [SKAction fadeAlphaTo:1.0 duration:1];
+    SKAction *showSaveMeFrame = [SKAction fadeAlphaTo:1.0 duration:1];
     
     [_backButton runAction:showBackButton];
     [_backButton runAction:moveBackButton];
@@ -692,7 +696,9 @@ SKNode *menuItems;
     [_scoreLabel_3 runAction:showScoreLabel_3];
     [_gameOverFrame runAction:showGameOverFrame];
     [_continueLabel runAction:showContinueLabel];
-    
+    [_saveMeCost runAction:showSaveMeCost];
+    [_saveMeFrame runAction:showSaveMeFrame];
+    // TODO 35 COINS
     
 
     /*      ****COUNTDOWN****
