@@ -21,6 +21,9 @@ BOOL share = NO;
 BOOL facebookIsSharing;
 BOOL twitterIsSharing;
 BOOL stopDifficult;
+BOOL enoughCoinsToSave;
+BOOL playButtonTouched;
+BOOL saved;
 
 
 float difficult = 1.0f;
@@ -63,6 +66,7 @@ SKNode *menuItems;
 // @property(nonatomic, retain) SKLabelNode *continueTimer;
 @property(nonatomic, retain) SKSpriteNode *saveMeCost;
 @property(nonatomic, retain) SKSpriteNode *saveMeFrame;
+@property(nonatomic, retain) SKLabelNode *notEnoughCoinsLabel;
 
 // @property(nonatomic, strong) SKLabelNode *highScoreLabel;
 @property(nonatomic, retain) SKSpriteNode *origami;
@@ -107,7 +111,14 @@ SKNode *menuItems;
         gameover = NO;
         
         _scoreLabel = [[SKLabelNode alloc] init];
-        _scoreLabel.text = @"0";
+
+
+        if (saved) {
+
+                _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+        }else if(!saved){
+                                _scoreLabel.text = @"0";
+        }
         _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + CGRectGetMidY(self.frame)/3);
         _scoreLabel.fontName = @"Boulder";
         _scoreLabel.fontSize = 64;
@@ -224,7 +235,8 @@ SKNode *menuItems;
         
         
         _scoreLabel_2 = [[SKLabelNode alloc] init];
-        _scoreLabel_2.text = @"0";
+        _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+
         _scoreLabel_2.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         _scoreLabel_2.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + CGRectGetMidY(self.frame)/3);
         _scoreLabel_2.fontName = @"Boulder";
@@ -274,6 +286,16 @@ SKNode *menuItems;
         _saveMeFrame.alpha = 0.0;
         [self addChild:_saveMeFrame];
         
+        _notEnoughCoinsLabel = [[SKLabelNode alloc] init];
+        _notEnoughCoinsLabel.text = @"Not enough coins";
+        _notEnoughCoinsLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
+        _notEnoughCoinsLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + _notEnoughCoinsLabel.frame.size.height*1.2);
+        _notEnoughCoinsLabel.fontName = @"Keep Calm";
+        _notEnoughCoinsLabel.fontColor = [SKColor redColor];
+        _notEnoughCoinsLabel.alpha = 0.0;
+        _notEnoughCoinsLabel.fontSize = 14;
+        [self addChild:_notEnoughCoinsLabel];
+        
  /*     *****CONTINUE TIMER******
   _continueTimer = [[SKLabelNode alloc] init];
 
@@ -312,6 +334,17 @@ SKNode *menuItems;
     
 }
 
+-(void)revive {
+    SKScene *scene = [[GBAGameScene alloc] initWithSize:self.size];
+    SKTransition *transition = [SKTransition fadeWithDuration:0.5];
+    [self.view presentScene:scene transition:transition];
+    saved = YES;
+    gameover = NO;
+    _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+                _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+    playButtonTouched = NO;
+}
+
 -(void)hideButtons {
     [_shareButton runAction:[SKAction moveToX:CGRectGetMaxX(self.frame) + _shareButton.size.width/2 duration:0.1]];
     [_leaderboardButton runAction:[SKAction moveToX:CGRectGetMinX(self.frame) - _leaderboardButton.size.width/2 duration:0.1]];
@@ -341,28 +374,61 @@ SKNode *menuItems;
     
     if (CGRectContainsPoint(_playButton.frame, touchLocation)) {
 
-            if (gameover) {
+        
                 [self resetScene];
+                        playButtonTouched = YES;
+                saved = NO;
+    
                 
-                
-                
-                
-                
-            }
+        
             [_playButton removeFromParent];
-            
+        
+       
             [GameState sharedInstance].score = 0;
             _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
             _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
         
-            
-            
+        
             
             [self removeActionForKey:origamiFallKey];
         
        
         
     }
+    
+    if (CGRectContainsPoint(_saveMeFrame.frame, touchLocation)) {
+        
+        if (enoughCoinsToSave) {
+            if (gameover) {
+                [self revive];
+            
+                [GameState sharedInstance].coins -= 35;
+                
+            }
+            [_playButton removeFromParent];
+            
+            
+            _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+            _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+            
+            
+            
+            
+            [self removeActionForKey:origamiFallKey];
+        }
+        
+        SKAction *showOffErrorMessage = [SKAction fadeAlphaTo:0.0 duration:1];
+        SKAction *showErrorMessage = [SKAction fadeAlphaTo:0.65 duration:1];
+        [_notEnoughCoinsLabel runAction: [SKAction sequence:@[
+                                                              showErrorMessage,
+                                                              showOffErrorMessage]]];
+        _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+        _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+
+
+
+    }
+    
     if (CGRectContainsPoint(_leaderboardButton.frame, touchLocation)) {
         
             [GameState sharedInstance].score = 0;
@@ -680,6 +746,7 @@ SKNode *menuItems;
     SKAction *showContinueLabel = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showSaveMeCost = [SKAction fadeAlphaTo:1.0 duration:1];
     SKAction *showSaveMeFrame = [SKAction fadeAlphaTo:1.0 duration:1];
+
     
     [_backButton runAction:showBackButton];
     [_backButton runAction:moveBackButton];
@@ -698,7 +765,12 @@ SKNode *menuItems;
     [_continueLabel runAction:showContinueLabel];
     [_saveMeCost runAction:showSaveMeCost];
     [_saveMeFrame runAction:showSaveMeFrame];
-    // TODO 35 COINS
+    
+    if ([GameState sharedInstance].coins >= 35) {
+        enoughCoinsToSave = YES;// [self revive] <-- ADD THIS FUNCTION
+    } else {
+        enoughCoinsToSave = NO;
+    }
     
 
     /*      ****COUNTDOWN****
@@ -751,7 +823,7 @@ SKNode *menuItems;
             [_amountOfCoins runAction:[SKAction moveByX:0 y:75 duration:1]];
             [_amountOfCoins runAction:[SKAction fadeAlphaTo:0.0 duration:1]];
             
-            [GameState sharedInstance].coins++;
+            [GameState sharedInstance].coins += 35;
         }
         else {
 
