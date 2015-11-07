@@ -10,8 +10,12 @@
 #import "GameState.h"
 #import <GameKit/GameKit.h>
 #import <Social/Social.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface GBAGameScene : SKScene <SKPhysicsContactDelegate, GKGameCenterControllerDelegate>
+
+
+@interface GBAGameScene : SKScene <SKPhysicsContactDelegate, GKGameCenterControllerDelegate, AVAudioPlayerDelegate>
+@property (nonatomic) AVAudioPlayer *bgSound;
 
 @end
 

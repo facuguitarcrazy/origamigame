@@ -99,7 +99,7 @@ NSURL *url;
         _store.size = _coinStore.size;
         [self addChild:_store];
     
-         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"deep-blue-sea" ofType:@"wav"]];
+         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"menuBGMusic" ofType:@"mp3"]];
         _sound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         _sound.delegate = self;
         _sound.numberOfLoops = -1;

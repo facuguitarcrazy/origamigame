@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4E453BA71B63F12600E8E944 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E453BA61B63F12600E8E944 /* back.png */; };
-		4E4BA9841BBD925800A17562 /* save-me-cost.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BA9831BBD925800A17562 /* save-me-cost.png */; settings = {ASSET_TAGS = (); }; };
+		4E4BA9841BBD925800A17562 /* save-me-cost.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BA9831BBD925800A17562 /* save-me-cost.png */; };
+		4E500D2B1BEAD50A00489161 /* binSound_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E500D261BEAD50A00489161 /* binSound_1.mp3 */; };
+		4E500D2C1BEAD50A00489161 /* binSound_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E500D271BEAD50A00489161 /* binSound_2.mp3 */; };
+		4E500D2D1BEAD50A00489161 /* binSound_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E500D281BEAD50A00489161 /* binSound_3.mp3 */; };
+		4E500D2E1BEAD50A00489161 /* binSound_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E500D291BEAD50A00489161 /* binSound_4.mp3 */; };
+		4E500D2F1BEAD50A00489161 /* binSound_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E500D2A1BEAD50A00489161 /* binSound_5.mp3 */; };
 		4E52E87C1B7AC7FC00D8A846 /* game_sans_serif_7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8E1B71117000534B61 /* game_sans_serif_7.ttf */; };
 		4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E453BA81B64166B00E8E944 /* boulder.ttf */; };
 		4E52E87E1B7AC80A00D8A846 /* playtime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EED7F8F1B71248300534B61 /* playtime.otf */; };
 		4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */; };
+		4E9577831BED582500E1E0B2 /* coin10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E9577821BED582500E1E0B2 /* coin10.wav */; };
+		4E9577871BED6EB500E1E0B2 /* menuBGMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E9577861BED6EB500E1E0B2 /* menuBGMusic.mp3 */; };
+		4E95778B1BED719400E1E0B2 /* gameMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E95778A1BED719400E1E0B2 /* gameMusic.mp3 */; };
 		4EAD3BB91B82702F000EB10B /* GBAStoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */; };
 		4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */; };
-		4ED8E95F1BBD95DA00828790 /* save-me-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED8E95E1BBD95DA00828790 /* save-me-frame.png */; settings = {ASSET_TAGS = (); }; };
+		4ED8E95F1BBD95DA00828790 /* save-me-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED8E95E1BBD95DA00828790 /* save-me-frame.png */; };
 		4EE9E99A1B8E07E90026899B /* KeepCalm-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9E9991B8E079B0026899B /* KeepCalm-Medium.ttf */; };
 		4EE9E99D1B8E0B760026899B /* GBACoinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E99C1B8E0B760026899B /* GBACoinScene.m */; };
 		5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227AB5A1B7B70390060502F /* origamiTitle.png */; };
@@ -76,7 +84,15 @@
 		4E453BA61B63F12600E8E944 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		4E453BA81B64166B00E8E944 /* boulder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = boulder.ttf; sourceTree = "<group>"; };
 		4E4BA9831BBD925800A17562 /* save-me-cost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-me-cost.png"; sourceTree = "<group>"; };
+		4E500D261BEAD50A00489161 /* binSound_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binSound_1.mp3; sourceTree = "<group>"; };
+		4E500D271BEAD50A00489161 /* binSound_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binSound_2.mp3; sourceTree = "<group>"; };
+		4E500D281BEAD50A00489161 /* binSound_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binSound_3.mp3; sourceTree = "<group>"; };
+		4E500D291BEAD50A00489161 /* binSound_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binSound_4.mp3; sourceTree = "<group>"; };
+		4E500D2A1BEAD50A00489161 /* binSound_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binSound_5.mp3; sourceTree = "<group>"; };
 		4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded-rectangle.png"; sourceTree = "<group>"; };
+		4E9577821BED582500E1E0B2 /* coin10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin10.wav; sourceTree = "<group>"; };
+		4E9577861BED6EB500E1E0B2 /* menuBGMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuBGMusic.mp3; sourceTree = "<group>"; };
+		4E95778A1BED719400E1E0B2 /* gameMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic.mp3; sourceTree = "<group>"; };
 		4EAD3BB71B82702F000EB10B /* GBAStoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAStoreScene.h; path = ../GBAStoreScene.h; sourceTree = "<group>"; };
 		4EAD3BB81B82702F000EB10B /* GBAStoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBAStoreScene.m; path = ../GBAStoreScene.m; sourceTree = "<group>"; };
 		4EC0FDDF1B7ACD8100E83B99 /* amount_of_coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amount_of_coins.png; sourceTree = "<group>"; };
@@ -164,6 +180,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E500D1B1BEACFDD00489161 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4E9577821BED582500E1E0B2 /* coin10.wav */,
+				5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */,
+				4E9577861BED6EB500E1E0B2 /* menuBGMusic.mp3 */,
+				5239FA5E1A8D6B7F00434C25 /* origami .wav */,
+				5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */,
+				4E95778A1BED719400E1E0B2 /* gameMusic.mp3 */,
+				4E500D261BEAD50A00489161 /* binSound_1.mp3 */,
+				4E500D271BEAD50A00489161 /* binSound_2.mp3 */,
+				4E500D281BEAD50A00489161 /* binSound_3.mp3 */,
+				4E500D291BEAD50A00489161 /* binSound_4.mp3 */,
+				4E500D2A1BEAD50A00489161 /* binSound_5.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		4E52E87B1B7AC78100D8A846 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +264,7 @@
 		5239FA251A8D6AA000434C25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E500D1B1BEACFDD00489161 /* Sounds */,
 				4E52E87B1B7AC78100D8A846 /* Fonts */,
 				4E453BA61B63F12600E8E944 /* back.png */,
 				4E52E87F1B7ACA7C00D8A846 /* rounded-rectangle.png */,
@@ -246,9 +281,6 @@
 				52444B4B1AB7805E00E6FD31 /* help-100.png */,
 				5285B9301AA3E38C00286034 /* leaderboard-104.png */,
 				52E3DE711B349B2C00D3860F /* share.png */,
-				5239FA5C1A8D6B7F00434C25 /* deep-blue-sea.wav */,
-				5239FA5E1A8D6B7F00434C25 /* origami .wav */,
-				5239FA601A8D6B7F00434C25 /* Hit_Hurt34.wav */,
 				5285B9321AA3EF4900286034 /* info_filled-100.png */,
 				52E258361A9BF4790072F711 /* origami-48.png */,
 				4E4BA9831BBD925800A17562 /* save-me-cost.png */,
@@ -377,32 +409,40 @@
 				52E3B5B11B544F3F009F7765 /* origami-credit.png in Resources */,
 				5285B9331AA3EF4900286034 /* info_filled-100.png in Resources */,
 				4EE9E99A1B8E07E90026899B /* KeepCalm-Medium.ttf in Resources */,
+				4E9577831BED582500E1E0B2 /* coin10.wav in Resources */,
 				5239FA651A8D6B7F00434C25 /* Hit_Hurt34.wav in Resources */,
 				5239FA771A8D6B9C00434C25 /* empty_trash-128 20-32-54-064 20-43-37-238 copia.png in Resources */,
 				5239FA751A8D6B9C00434C25 /* GameOverImage.png in Resources */,
+				4E500D2D1BEAD50A00489161 /* binSound_3.mp3 in Resources */,
 				5239FA381A8D6AA000434C25 /* Images.xcassets in Resources */,
 				5239FA721A8D6B9C00434C25 /* LaunchImage_Origami.png in Resources */,
 				52E3DE7C1B34F77700D3860F /* facebook_background.png in Resources */,
 				5239FA7F1A8D805C00434C25 /* LaunchScreen.xib in Resources */,
+				4E500D2C1BEAD50A00489161 /* binSound_2.mp3 in Resources */,
 				4E52E8801B7ACA7C00D8A846 /* rounded-rectangle.png in Resources */,
+				4E500D2F1BEAD50A00489161 /* binSound_5.mp3 in Resources */,
 				5227AB5C1B7B70390060502F /* origamiTitle.png in Resources */,
 				5239FA631A8D6B7F00434C25 /* origami .wav in Resources */,
 				4EC0FDE01B7ACD8100E83B99 /* amount_of_coins.png in Resources */,
 				5239FA731A8D6B9C00434C25 /* gameOverRectangle.png in Resources */,
 				4ED8E95F1BBD95DA00828790 /* save-me-frame.png in Resources */,
+				4E500D2E1BEAD50A00489161 /* binSound_4.mp3 in Resources */,
 				52E3DE7E1B34F77700D3860F /* twitter_background.png in Resources */,
 				5239FA5B1A8D6B6500434C25 /* MenuParticleRain.sks in Resources */,
+				4E95778B1BED719400E1E0B2 /* gameMusic.mp3 in Resources */,
 				5239FA741A8D6B9C00434C25 /* shakeMessage.png in Resources */,
 				4E4BA9841BBD925800A17562 /* save-me-cost.png in Resources */,
 				4E52E87D1B7AC7FF00D8A846 /* boulder.ttf in Resources */,
 				4E453BA71B63F12600E8E944 /* back.png in Resources */,
 				52E3DE7D1B34F77700D3860F /* facebook.png in Resources */,
 				5239FA361A8D6AA000434C25 /* Main.storyboard in Resources */,
+				4E500D2B1BEAD50A00489161 /* binSound_1.mp3 in Resources */,
 				52E3DE721B349B2C00D3860F /* share.png in Resources */,
 				4E52E87C1B7AC7FC00D8A846 /* game_sans_serif_7.ttf in Resources */,
 				5285B9311AA3E38C00286034 /* leaderboard-104.png in Resources */,
 				52E258371A9BF4790072F711 /* origami-48.png in Resources */,
 				52E3DE7F1B34F77700D3860F /* twitter.png in Resources */,
+				4E9577871BED6EB500E1E0B2 /* menuBGMusic.mp3 in Resources */,
 				52444B4C1AB7805E00E6FD31 /* help-100.png in Resources */,
 				5239FA611A8D6B7F00434C25 /* deep-blue-sea.wav in Resources */,
 				5227AB601B7B73A40060502F /* info-screen.png in Resources */,

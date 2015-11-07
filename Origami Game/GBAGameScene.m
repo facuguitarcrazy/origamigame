@@ -25,7 +25,7 @@ BOOL enoughCoinsToSave;
 BOOL playButtonTouched;
 BOOL saved;
 
-
+int binMusic;
 float difficult = 1.0f;
 float timesDifficult;
 float countdown = 4.0f;
@@ -39,8 +39,12 @@ static NSString *origamiFallKey = @"origamiFall";
 static NSString *rotateScoreKey = @"rotateScore";
 static NSString *fallScoreKey = @"fallScoreKey";
 static NSString *highScoreKey = @"HighScoreSaved";
+static NSString *bgMusicName;
 
 NSURL *gameUrl;
+NSURL *soundUrl;
+NSURL *coinSoundUrl;
+
 
 
 static const uint32_t origamiCategory = 0x1 << 0;   //00000000000000000000000000000001
@@ -76,7 +80,8 @@ SKNode *menuItems;
 @property(nonatomic, retain) SKSpriteNode *playButton;
 @property (nonatomic, retain)SKSpriteNode *leaderboardButton;
 @property(nonatomic, retain) SKSpriteNode *shareButton;
-@property(nonatomic) AVAudioPlayer *gameSound;
+@property(nonatomic) AVAudioPlayer *binSound;
+@property(nonatomic) AVAudioPlayer *coinSound;
 
 
 @property(nonatomic, retain) SKAction *actionOrigami;
@@ -112,6 +117,14 @@ SKNode *menuItems;
         
         _scoreLabel = [[SKLabelNode alloc] init];
 
+        NSLog(@"Game started...");
+            
+             soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gameMusic" ofType:@"mp3"]];
+            _bgSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+            _bgSound.delegate = self;
+            _bgSound.numberOfLoops = -1;
+            [_bgSound play]; 
+        
 
         if (saved) {
 
@@ -338,11 +351,11 @@ SKNode *menuItems;
     SKScene *scene = [[GBAGameScene alloc] initWithSize:self.size];
     SKTransition *transition = [SKTransition fadeWithDuration:0.5];
     [self.view presentScene:scene transition:transition];
-    saved = YES;
+    saved = NO;
     gameover = NO;
     _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
                 _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
-    playButtonTouched = NO;
+    playButtonTouched = YES;
 }
 
 -(void)hideButtons {
@@ -373,20 +386,21 @@ SKNode *menuItems;
     }
     
     if (CGRectContainsPoint(_playButton.frame, touchLocation)) {
-
-        
-                [self resetScene];
-                        playButtonTouched = YES;
-                saved = NO;
-    
-                
-        
+        if (gameover) {
+            [self resetScene];
+            playButtonTouched = NO;
+            saved = YES;
+            
+            
+            
             [_playButton removeFromParent];
+        }
+        
+        
         
        
             [GameState sharedInstance].score = 0;
-            _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
-            _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+        
         
         
             
@@ -401,15 +415,20 @@ SKNode *menuItems;
         if (enoughCoinsToSave) {
             if (gameover) {
                 [self revive];
+                saved = NO;
+                playButtonTouched = YES;
+        
             
                 [GameState sharedInstance].coins -= 35;
+                
+                
+                _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
+                _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
                 
             }
             [_playButton removeFromParent];
             
             
-            _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
-            _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
             
             
             
@@ -699,6 +718,7 @@ SKNode *menuItems;
 */
 
 -(void) gameOver {
+    [_binSound stop];
     
     share = NO;
    
@@ -709,10 +729,11 @@ SKNode *menuItems;
     [[GameState sharedInstance] saveState];
     
     gameUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Hit_Hurt34" ofType:@"wav"]];
-    _gameSound = [[AVAudioPlayer alloc] initWithContentsOfURL:gameUrl error:nil];
-    _gameSound.delegate = self;
+    _binSound = [[AVAudioPlayer alloc] initWithContentsOfURL:gameUrl error:nil];
+    _binSound.delegate = self;
+    [_binSound play];
     
-    [_gameSound play];
+    
     
     
     //////////////////////////////////////////////////////////////// CAMBIOS DE POSICIONES  ////////////////////////////////////////////
@@ -823,7 +844,14 @@ SKNode *menuItems;
             [_amountOfCoins runAction:[SKAction moveByX:0 y:75 duration:1]];
             [_amountOfCoins runAction:[SKAction fadeAlphaTo:0.0 duration:1]];
             
-            [GameState sharedInstance].coins += 35;
+            [GameState sharedInstance].coins++;
+            
+            coinSoundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"coin10" ofType:@"wav"]];
+            _coinSound = [[AVAudioPlayer alloc] initWithContentsOfURL:coinSoundUrl error:nil];
+            _coinSound.delegate = self;
+            
+            [_coinSound play];
+            
         }
         else {
 
@@ -832,10 +860,36 @@ SKNode *menuItems;
             _scoreLabel.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
             _scoreLabel_2.text = [NSString stringWithFormat:@"%d", [GameState sharedInstance].score];
             
-            gameUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"origami " ofType:@"wav"]];
-            _gameSound = [[AVAudioPlayer alloc] initWithContentsOfURL:gameUrl error:nil];
-            _gameSound.delegate = self;
-            [_gameSound play];
+            binMusic = randomInRange(1, 6);
+            
+            switch (binMusic) {
+                case 1:
+                    bgMusicName = @"binSound_1";
+                    break;
+                case 2:
+                    bgMusicName = @"binSound_2";
+                    break;
+                case 3:
+                    bgMusicName = @"binSound_3";
+                    break;
+                case 4:
+                    bgMusicName = @"binSound_4";
+                    break;
+                case 5:
+                    bgMusicName = @"binSound_5";
+                    break;
+                default:
+                    break;
+            }
+            
+            NSLog(@"Sound %i", binMusic);
+            
+            gameUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:bgMusicName ofType:@"mp3"]];
+            _binSound = [[AVAudioPlayer alloc] initWithContentsOfURL:gameUrl error:nil];
+            _binSound.delegate = self;
+            [_binSound play];
+            
+            
 
         }
     }
@@ -904,7 +958,7 @@ SKNode *menuItems;
         stopDifficult = NO;
     }
     
-    NSLog(@"%.2f", difficult);
+    //TODO MONITARIAZIÓN DIFICULTAD NSLog(@"%.2f", difficult);
 }
 
 //GAME CENTER
