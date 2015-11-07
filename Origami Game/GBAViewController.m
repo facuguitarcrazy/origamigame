@@ -51,7 +51,7 @@
     GBAViewController *viewController = [[GBAViewController alloc] init];
     
     SKView *skView = (SKView *) self.originalContentView;
-    skView.showsFPS = YES;
+    skView.showsFPS = NO;
     skView.showsNodeCount = NO;
     
   
