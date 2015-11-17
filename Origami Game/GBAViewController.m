@@ -6,9 +6,12 @@
 //  Copyright (c) 2015 Facundo Schiavoni. All rights reserved.
 //
 
+@import GoogleMobileAds;
+
 #import "GBAViewController.h"
 #import "GBAGameScene.h"
 #import "GBAMenuScene.h"
+
 
 
 @implementation SKScene (Unarchive)
@@ -47,6 +50,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Google Mobile Ad SDK version: %@", [GADRequest sdkVersion]);
     
     GBAViewController *viewController = [[GBAViewController alloc] init];
     

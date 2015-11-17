@@ -6,7 +6,10 @@
 //  Copyright (c) 2015 Facundo Schiavoni. All rights reserved.
 //
 
+#import <TAPPX/TAPPXUtils.h>
+
 #import "AppDelegate.h"
+
 
 
 @interface AppDelegate ()
@@ -18,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [TAPPXUtils trackInstall:@"/120940746/Pub-6885-iOS-1122"];
     return YES;
 }
 
